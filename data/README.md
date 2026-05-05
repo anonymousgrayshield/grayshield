@@ -53,15 +53,13 @@ data/
 |-- download_paper_payloads.py
 |-- download_from_hf.py
 `-- malware/
-    |-- .keep
-    |-- metadata.json
-    `-- manifest.json
+    `-- .keep
 ```
 
-- `malware/metadata.json` is the paper-facing metadata file used for the
-  anonymous dataset card and reproducibility notes.
-- `malware/manifest.json` contains MalwareBazaar download metadata for the
-  subset fetched directly from the source API.
+- `malware/.keep` is an empty placeholder so the directory exists.
+- Real `.malware` payload files and local download manifests are intentionally
+  not tracked. They are created only after a reviewer explicitly runs one of
+  the rehydration scripts in an isolated environment.
 
 ## Preferred: rehydrate from MalwareBazaar by SHA256
 
@@ -83,6 +81,8 @@ python data/download_paper_payloads.py --appendix
 The script writes `.malware` files into `data/malware/` and records a local
 `paper_payload_manifest.json`. The experiment scripts then discover the
 main-paper payloads automatically through their SHA256 hashes.
+
+`paper_payload_manifest.json` is local-only and ignored by Git.
 
 ## Optional controlled dataset mirror
 
@@ -117,5 +117,5 @@ the download script.
 
 ## Citation
 
-If you use the public payload set, please cite the paper and reference the
-dataset URL above.
+For double-blind review, cite the anonymous paper/artifact rather than a
+non-anonymous project or dataset URL.

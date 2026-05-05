@@ -1,72 +1,97 @@
-# GrayShield: Gray-Code-Guided Bit-Level Sanitization for Transformer Models
+# GrayShield: Gray-Code-Guided Bit-Level Sanitization for Transformer Model Supply-Chain Security
 
-> Research code for studying LSB-based payload injection in transformer weights and defending against it with GrayShield, a post-training bit-level sanitization method.
+This is the anonymized replication package for the NeurIPS 2026 submission
+**"GrayShield: Gray-Code-Guided Bit-Level Sanitization for Transformer Model
+Supply-Chain Security"**.
 
-Implementation for:
-**"GrayShield: Gray-Code-Guided Bit-Level Sanitization for Transformer Models"**
+Author names, affiliations, personal repository links, and institutional
+contact information are intentionally withheld for double-blind review.
 
-Author and affiliation information withheld for double-blind review.
+## Anonymous Review Status
 
-[![Python](https://img.shields.io/badge/Python-3.10+-blue)](https://python.org)
-[![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-orange)](https://pytorch.org)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+This repository is prepared as a double-blind review artifact.
 
----
+- Git commit authors are anonymized as `Anonymous Authors <anonymous@example.com>`.
+- Project metadata uses `Anonymous Authors` / `Anonymous Maintainers`.
+- The artifact does not include author names, affiliations, personal emails,
+  personal GitHub accounts, or institutional paths.
+- The public repository does not ship real malware binaries.
+- The only tracked payload files are benign byte payloads used for smoke tests.
+- Exact paper payloads can be rehydrated by SHA256 from MalwareBazaar only by
+  reviewers who have an approved isolated malware-analysis environment.
 
-## Overview
+This layout follows the NeurIPS code/data review expectation that review
+artifacts be anonymized. For the submission ZIP, include this repository
+snapshot and do not include local files under `data/malware/` other than
+`data/malware/.keep`.
 
-This project evaluates how malware payloads can be injected into float32 weight mantissas and how different post-training defenses disrupt recovery while preserving model utility.
+## Paper Summary
 
-![GrayShield overview](grayshield.png)
+GrayShield studies an AI model supply-chain threat: malicious payloads hidden
+in the least significant bits (LSBs) of FP32 transformer weights. The proposed
+defense is a post-training, zero-data sanitization method that overwrites the
+target mantissa LSBs with a secret-keyed Gray-code sequence.
 
-The pipeline above shows the end-to-end experimental structure used in the
-repository: payload injection for `RQ1`, defense evaluation for `RQ2`,
-adaptive-attacker robustness for `RQ3`, and Pareto-style trade-off analysis
-for `RQ4`.
+The paper reports:
 
-**GrayShield** is the main defense in this repository. In the current implementation:
+- 4 transformer presets: `bert_sst2`, `roberta_sentiment`, `vit_cifar10`,
+  `swin_cifar10`.
+- 2 main real-world MalwareBazaar payloads:
+  - low-entropy JavaScript payload,
+  - high-entropy executable payload.
+- 7 defenses: `grayshield`, `pattern`, `random`, `gaussian`, `finetune`,
+  `ptq`, `swp`.
+- 5 attacker variants: `naive`, `interleave`, `repeat3`, `repeat5`, `rs`.
+- Main operating depth: `x=19`.
+- Main RQ3 result: GrayShield achieves `49.96% +/- 0.66` Recovery Reduction
+  with sub-1% accuracy impact across completed attacker variants.
 
-- It overwrites the low `x` mantissa bits of targeted FP32 parameters with a Gray-code-guided mask.
-- `V1` is seed-based and deterministic.
-- `V2` uses an HMAC-derived keyed offset.
-- `V3` extends `V2` with per-run salt and layer-aware domain separation.
-- `scripts/exps.sh` enables **GrayShield V3 by default**.
+The formal claim is that, under a secret per-tensor seed and idealized keyed
+PRF model, GrayShield reduces the effective covert-channel capacity to zero.
 
-The current experiment pipeline also includes matched baselines:
+## Repository Contents
 
-- `RandomFlip`
-- `PatternMask`
-- `GaussianNoise`
-- `FineTune`
-- `PTQ`
-- `SWP`
+```text
+grayshield/
+  cli.py                         # CLI for RQ1-RQ4
+  defense/                       # GrayShield and six baselines
+  experiments/                   # Experiment runner
+  lsb/                           # Bit-level injection/extraction
+  metrics/                       # Payload/model/Pareto metrics
+  models/                        # Model presets and target selection
+  payload/                       # Payload encoders, RS code, MalwareBazaar helper
+  visualization/                 # RQ plotting scripts
 
-Adaptive attacker variants currently implemented:
+scripts/
+  smoke_test.sh                  # Offline reviewer smoke test
+  exps.sh                        # Main experiment wrapper
+  experiments.sh                 # Core experiment grid runner
+  generate_tables.py             # Table regeneration from bundled results
 
-- `naive`
-- `repeat3`
-- `repeat5`
-- `interleave`
-- `rs` (`RS(255,127)`)
+data/
+  benign_payload.bin             # Benign smoke-test payload
+  test_payload.bin               # Benign smoke-test payload
+  download_paper_payloads.py     # Optional MalwareBazaar rehydration by SHA256
+  download_from_hf.py            # Optional anonymous dataset mirror helper
+  malware/.keep                  # Empty placeholder; real payloads are not tracked
 
----
+release_results/
+  rq1/ rq2/ rq3/ rq4/             # Curated paper result artifacts
+  artifact_sources.json          # Artifact provenance
+```
 
-## Research Questions
+## Safety Notice
 
-| RQ | Goal | Standalone? | Notes |
-|----|------|-------------|-------|
-| `RQ1` | Injection feasibility vs. LSB depth | Yes | Payload injection only |
-| `RQ2` | Defense effectiveness | Yes | Baseline defense comparison; naive attacker by default |
-| `RQ3` | Robustness across attacker variants | Yes | Main adaptive-attacker experiment |
-| `RQ4` | Aggregate trade-off visualization | No | Reads existing `RQ2` / `RQ3` outputs |
+This repository is for defensive security research only.
 
-In practice:
+- Do not execute malware payloads.
+- Treat downloaded payloads as opaque byte strings only.
+- Use an isolated VM/container if you rehydrate real malware samples.
+- Expect antivirus tools to warn on rehydrated `.malware` files.
+- Do not commit or upload rehydrated payloads.
 
-- `RQ1`, `RQ2`, and `RQ3` can be run independently.
-- `RQ4` depends on previously generated `rq2.jsonl` and/or `rq3.jsonl`.
-- `scripts/exps.sh --rq all` runs them in the correct order.
-
----
+The tracked repository contains no `.malware`, `.exe`, `.elf`, `.apk`,
+`.xlsx`, `.zip`, `.dll`, `.so`, `.scr`, `.ps1`, or `.js` payload files.
 
 ## Installation
 
@@ -74,89 +99,72 @@ In practice:
 git clone https://github.com/anonymousgrayshield/grayshield.git
 cd grayshield
 
-conda create -n grayshield python=3.10
-conda activate grayshield
-
-pip install -r requirements.txt
-```
-
-If you prefer `venv`:
-
-```bash
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
----
+Conda is also fine:
 
-## Quick Start
+```bash
+conda create -n grayshield python=3.10
+conda activate grayshield
+pip install -r requirements.txt
+```
 
-### 1. Run the reviewer smoke test
+## Reviewer Quick Path
 
-The anonymous public repository intentionally does **not** ship executable
-malware binaries.  It includes benign byte payloads for smoke testing and the
-curated result artifacts used by the paper.
+### 1. Offline smoke test, no malware, no model download
+
+This is the fastest command for reviewers. It verifies imports, payload bit
+encoding/decoding, LSB injection, GrayShield sanitization, table regeneration,
+and the main experiment wrapper's dry-run path.
 
 ```bash
 bash scripts/smoke_test.sh
 ```
 
-This verifies imports, payload bit encoding/decoding, LSB injection,
-GrayShield sanitization, and table regeneration from `release_results/`.
+Expected final line:
 
-### 2. Optional: rehydrate paper payloads in a controlled environment
-
-The main-paper payloads are real MalwareBazaar samples and should be handled
-only in an isolated research environment. The preferred reviewer path is to
-download the exact paper payloads by SHA256 from MalwareBazaar:
-
-```bash
-export MALWAREBAZAAR_API_KEY=<optional-api-key>
-python data/download_paper_payloads.py
+```text
+[smoke] OK
 ```
 
-This writes the two main-paper samples into `data/malware/`, where
-`scripts/exps.sh --phase main` will find them automatically. To also fetch
-the four supplementary appendix payloads:
+### 2. Regenerate paper tables from bundled artifacts
 
 ```bash
-python data/download_paper_payloads.py --appendix
+tmpdir="$(mktemp -d)"
+cp release_results/rq3/rq3.jsonl "$tmpdir/rq3.jsonl"
+python scripts/generate_tables.py --output_dir "$tmpdir"
+ls "$tmpdir"/table*_defense_*
 ```
 
-A controlled anonymous dataset mirror can also be used when provided with the
-submission package:
+This uses only files already included in `release_results/`.
+
+### 3. Regenerate plots from bundled artifacts
 
 ```bash
-export GRAYSHIELD_HF_DATASET_ID=<anonymous-dataset-id>
-python data/download_from_hf.py
+PYTHONPATH=. python grayshield/visualization/rq1.py \
+  --input_dir release_results/rq1 \
+  --output_dir release_results/rq1
+
+PYTHONPATH=. python grayshield/visualization/rq2.py \
+  --input_dir release_results/rq2 \
+  --output_dir release_results/rq2
+
+PYTHONPATH=. python grayshield/visualization/rq3.py \
+  --input_dir release_results/rq3 \
+  --output_dir release_results/rq3
+
+PYTHONPATH=. python grayshield/visualization/rq4.py \
+  --input_dir release_results \
+  --output_dir release_results/rq4
 ```
 
-If the dataset identifier is not available, reviewers can still run the smoke
-test and regenerate all included plots/tables from `release_results/`.
+### 4. Dry-run the main experiment wrapper
 
-### 3. Run the main paper pipeline
-
-Recommended:
-
-```bash
-bash scripts/exps.sh \
-  --phase main \
-  --rq all \
-  --output-dir results/$(date +%F_%H%M)_complete \
-  --visualize
-```
-
-Notes:
-
-- `--phase main` uses the fixed 4-model main-paper set.
-- Full main-paper reruns require the controlled paper payloads under
-  `data/malware/`.
-- `--visualize` runs centralized plotting after experiments complete.
-- `experiment.log` is written to the output directory.
-- Using `$(date +%F_%H%M)` avoids mixing multiple runs into one folder.
-
-For a quick benign end-to-end check without the paper payloads:
+This prints the actual commands that would be executed, without downloading
+models or running the full grid.
 
 ```bash
 bash scripts/exps.sh \
@@ -171,43 +179,11 @@ bash scripts/exps.sh \
   --dry-run
 ```
 
-### 4. Re-generate plots from existing results
+### 5. Lightweight real run with benign payload
 
-For a raw experiment directory:
-
-```bash
-bash scripts/exps.sh --visualize-only --output-dir results/2026-03-21_0200_complete
-```
-
-For the curated paper artifact bundle:
-
-```bash
-PYTHONPATH=. python grayshield/visualization/rq1.py --input_dir release_results/rq1 --output_dir release_results/rq1
-PYTHONPATH=. python grayshield/visualization/rq2.py --input_dir release_results/rq2 --output_dir release_results/rq2
-PYTHONPATH=. python grayshield/visualization/rq3.py --input_dir release_results/rq3 --output_dir release_results/rq3
-python scripts/generate_tables.py --output_dir release_results/rq3
-```
-
----
-
-## Single-Command Examples
-
-### RQ1: Injection Feasibility
-
-```bash
-python -m grayshield.cli rq1 \
-  --model bert_sst2 \
-  --task sst2 \
-  --payload_path data/test_payload.bin \
-  --x 4 \
-  --mode encoder_only \
-  --n_eval 8 \
-  --batch_size 4 \
-  --device cpu \
-  --seed 42
-```
-
-### RQ2: Defense Effectiveness
+This runs an actual small RQ2 instance with a benign payload. It may download
+the requested Hugging Face model and evaluation data if they are not already
+cached.
 
 ```bash
 python -m grayshield.cli rq2 \
@@ -221,10 +197,115 @@ python -m grayshield.cli rq2 \
   --n_eval 8 \
   --batch_size 4 \
   --device cpu \
+  --output_dir results/reviewer_rq2_smoke \
   --seed 42
 ```
 
-### RQ3: Adaptive Attackers
+## Paper Payload Rehydration
+
+The completed paper experiments use two real MalwareBazaar payloads. They are
+not redistributed in this public anonymous repository.
+
+In an isolated malware-analysis environment, reviewers may rehydrate the exact
+main-paper payloads by SHA256:
+
+```bash
+export MALWAREBAZAAR_API_KEY=<optional-api-key>
+python data/download_paper_payloads.py
+```
+
+To include the four supplementary appendix payloads as well:
+
+```bash
+python data/download_paper_payloads.py --appendix
+```
+
+Dry-run mode prints the selected hashes without downloading:
+
+```bash
+python data/download_paper_payloads.py --dry-run
+python data/download_paper_payloads.py --appendix --dry-run
+```
+
+Downloaded files are written locally under `data/malware/` and are ignored by
+Git. Do not include them in the anonymous submission ZIP.
+
+If an anonymous controlled dataset mirror is supplied with the submission
+materials, reviewers may instead set:
+
+```bash
+export GRAYSHIELD_HF_DATASET_ID=<anonymous-dataset-id>
+python data/download_from_hf.py
+```
+
+## Main Paper Rerun
+
+After the two main paper payloads have been rehydrated into `data/malware/`,
+run:
+
+```bash
+bash scripts/exps.sh \
+  --phase main \
+  --rq all \
+  --output-dir results/$(date +%F_%H%M)_complete \
+  --visualize
+```
+
+Notes:
+
+- `--phase main` uses the four main paper model presets:
+  `bert_sst2`, `roberta_sentiment`, `vit_cifar10`, `swin_cifar10`.
+- The default paper depth for RQ2/RQ3/RQ4 is `x=19`.
+- The default RQ3 attacker variants are
+  `naive,repeat3,repeat5,interleave,rs`.
+- `scripts/exps.sh` enables GrayShield V3 by default.
+- Full reruns may take substantial GPU time and require model/dataset
+  downloads.
+
+## Single-Command Examples
+
+These commands are intentionally small. They use `data/test_payload.bin`, not
+the real paper malware payloads.
+
+### RQ1: injection feasibility
+
+```bash
+python -m grayshield.cli rq1 \
+  --model bert_sst2 \
+  --task sst2 \
+  --payload_path data/test_payload.bin \
+  --x 4 \
+  --mode encoder_only \
+  --n_eval 8 \
+  --batch_size 4 \
+  --device cpu \
+  --output_dir results/reviewer_rq1_smoke \
+  --seed 42
+```
+
+### RQ2: defense effectiveness
+
+```bash
+python -m grayshield.cli rq2 \
+  --model bert_sst2 \
+  --task sst2 \
+  --payload_path data/test_payload.bin \
+  --x 4 \
+  --mode encoder_only \
+  --defense grayshield \
+  --attacker_variant naive \
+  --n_eval 8 \
+  --batch_size 4 \
+  --device cpu \
+  --output_dir results/reviewer_rq2_smoke \
+  --seed 42
+```
+
+### RQ3: adaptive attackers
+
+This checks all five implemented attacker variants for one model and a compact
+three-defense subset. On CPU it can take several minutes; use the offline
+smoke test above for the fastest reviewer check.
 
 ```bash
 python -m grayshield.cli rq3 \
@@ -233,15 +314,16 @@ python -m grayshield.cli rq3 \
   --payload_path data/test_payload.bin \
   --x 4 \
   --mode encoder_only \
-  --attacker_variants "naive,repeat3,repeat5,interleave,rs" \
-  --defenses "random,pattern,gaussian,finetune,ptq,swp,grayshield" \
+  --attacker_variants naive,repeat3,repeat5,interleave,rs \
+  --defenses grayshield,pattern,ptq \
   --n_eval 8 \
   --batch_size 4 \
   --device cpu \
+  --output_dir results/reviewer_rq3_smoke \
   --seed 42
 ```
 
-### RQ4: Aggregate Existing RQ2/RQ3 Results
+### RQ4: aggregate existing RQ2/RQ3 results
 
 ```bash
 python -m grayshield.cli rq4 \
@@ -249,22 +331,16 @@ python -m grayshield.cli rq4 \
   --task sst2 \
   --payload_path data/test_payload.bin \
   --x 4 \
-  --results_dir release_results/rq3 \
-  --output_dir release_results/rq3 \
+  --results_dir release_results \
+  --output_dir results/reviewer_rq4_from_release \
   --device cpu
 ```
 
----
+## Experiment Interface
 
-## Main Runner
-
-`scripts/exps.sh` is the main entry point. It:
-
-- exports `PYTHONPATH`
-- auto-loads or generates `.grayshield_key`
-- enables `GRAYSHIELD_V3=1`
-- runs `scripts/experiments.sh`
-- optionally launches centralized visualization scripts
+`scripts/exps.sh` wraps `scripts/experiments.sh`, exports `PYTHONPATH`,
+generates `.grayshield_key` when absent, enables `GRAYSHIELD_V3=1`, and
+optionally launches visualization scripts.
 
 Common options:
 
@@ -272,281 +348,92 @@ Common options:
 |--------|-------------|---------|
 | `--rq` | `rq1`, `rq2`, `rq3`, `rq4`, `all` | `all` |
 | `--phase` | `main` or `appendix` | `main` |
-| `--task-type` | `text`, `vision`, `all` | `all` |
-| `--models` | Explicit comma-separated preset list | unset |
+| `--models` | Comma-separated preset list | phase-dependent |
 | `--payloads` | Payload directory | `data` |
-| `--output-dir` | Output directory | `results/YYYY-MM-DD` |
-| `--x-bits` | Injection depth | `19` |
-| `--attacker-variant` | RQ2 attacker encoding | `naive` |
-| `--attacker-variants` | RQ3 attacker encodings | `naive,repeat3,repeat5,interleave,rs` |
+| `--x-bits` | RQ2/RQ3/RQ4 LSB depth | `19` |
+| `--attacker-variant` | RQ2 attacker | `naive` |
+| `--attacker-variants` | RQ3 attackers | `naive,repeat3,repeat5,interleave,rs` |
+| `--n-eval` | Evaluation samples | `2048` |
+| `--batch-size` | Evaluation batch size | `16` |
+| `--no-paper-payloads` | Use benign/local payloads instead of SHA256 paper set | off |
 | `--visualize` | Run plotting after experiments | off |
-| `--visualize-only` | Plot only, no experiments | off |
-| `--dry-run` | Print generated commands without executing them | off |
+| `--visualize-only` | Plot only | off |
+| `--dry-run` | Print commands without execution | off |
 
-Important behavior:
+## Implemented Defenses
 
-- With `--phase main`, the scripts ignore `--task-type` and use the fixed main-paper model set.
-- Main-phase paper reruns use the two SHA256-matched payloads under
-  `data/malware` by default.  These files are not included in the public
-  anonymous GitHub repository; rehydrate them from MalwareBazaar by hash or
-  through the controlled anonymous dataset channel.
-- `RQ4` aggregates results already written by `RQ2` and `RQ3`.
+| Defense | Type | Paper role |
+|---------|------|------------|
+| `grayshield` | Secret-keyed Gray-code LSB overwrite | Proposed method |
+| `pattern` | Fixed-pattern LSB overwrite | Deterministic baseline |
+| `random` | Bernoulli LSB flipping | Stochastic bit baseline |
+| `gaussian` | Additive FP32 Gaussian noise | Continuous perturbation baseline |
+| `finetune` | Lightweight clean-data fine-tuning | Data-dependent baseline |
+| `ptq` | Symmetric INT8 quantize-dequantize projection | Quantization baseline |
+| `swp` | Magnitude-ranked selective weight perturbation | Literature-inspired baseline |
 
----
+## Implemented Attacker Variants
 
-## Defense Strategies
+| Variant | Mechanism |
+|---------|-----------|
+| `naive` | Direct LSB substitution |
+| `interleave` | Deterministic payload-bit permutation |
+| `repeat3` | 3x repetition with majority decoding |
+| `repeat5` | 5x repetition with majority decoding |
+| `rs` | Chunked `RS(255,127)` byte-level coding |
 
-| Defense | Type | Main Parameters | Current Role |
-|---------|------|-----------------|--------------|
-| `grayshield` | Gray-code-guided LSB sanitization | `x`, `GRAYSHIELD_KEY`, `GRAYSHIELD_V3` | Main defense |
-| `random` | Random LSB flipping | `flip_prob` | Stochastic baseline |
-| `pattern` | Fixed-pattern overwrite | `pattern` | Deterministic baseline |
-| `gaussian` | Additive FP32 noise | `sigma` | Continuous perturbation baseline |
-| `finetune` | Small clean-data fine-tune | `finetune_steps`, `finetune_lr` | Data-dependent baseline |
-| `ptq` | Static 8-bit projection with calibration | `ptq_calibration_samples`, `ptq_calibration_batches` | Quantization baseline |
-| `swp` | Selective low-magnitude perturbation | `swp_fraction` | Matched lightweight baseline |
+## Bundled Results
 
-### GrayShield versions
+The curated paper artifact bundle lives under `release_results/`:
 
-| Version | Description | How it is activated |
-|---------|-------------|---------------------|
-| `v1` | Seed-based Gray-code masking | No key |
-| `v2` | HMAC-keyed masking | `GRAYSHIELD_KEY` set |
-| `v3` | `v2` + per-run salt + layer-specific domain separation | `GRAYSHIELD_KEY` + `GRAYSHIELD_V3=1` |
+- `release_results/rq1/`: refreshed RQ1 injection feasibility artifacts.
+- `release_results/rq2/`: defense effectiveness artifacts.
+- `release_results/rq3/`: adaptive-attacker robustness artifacts and tables.
+- `release_results/rq4/`: Pareto/deployment trade-off artifacts.
+- `release_results/artifact_sources.json`: provenance for copied artifacts.
 
-`scripts/exps.sh` runs **V3 by default**.
+These artifacts are included so reviewers can inspect and regenerate the
+published plots/tables without running the full GPU experiment grid.
 
----
+## Reproducibility Settings
 
-## Attacker Variants
+The paper reports:
 
-| Variant | Mechanism | Expansion | Notes |
-|---------|-----------|-----------|-------|
-| `naive` | Direct bit injection | `1x` | Baseline attacker |
-| `repeat3` | 3x repetition + majority vote | `3x` | Simple ECC |
-| `repeat5` | 5x repetition + majority vote | `5x` | Stronger repetition ECC |
-| `interleave` | Deterministic permutation of payload bits | `1x` | Burst-error resilience |
-| `rs` | Chunked `RS(255,127)` byte-level code | about `2x` | Strong ECC attacker aligned with paper |
+- run seed: `1`
+- evaluation seed: `42`
+- evaluation subset size: `512`
+- software: Python 3.13, PyTorch 2.9.1, Transformers 5.0.0
+- hardware: Ubuntu 22.04.5, 2 x Intel Xeon Gold 6430, 503 GiB RAM,
+  2 x NVIDIA RTX PRO 6000 Blackwell GPUs with 96 GB VRAM each
 
-`rs` is implemented in-repo via `grayshield/payload/reed_solomon.py` and is integrated into the same `encode_payload / decode_payload` path as the other attacker variants.
+The anonymous package supports Python 3.10+ for review-time reproduction.
 
----
+## GrayShield Keying
 
-## Default Experiment Scope
-
-### Main phase
-
-`--phase main` uses:
-
-- Models: `bert_sst2`, `roberta_sentiment`, `vit_cifar10`, `swin_cifar10`
-- Payloads: the fixed low-entropy and high-entropy SHA256-matched samples
-- Defenses: `random, pattern, gaussian, finetune, ptq, swp, grayshield`
-
-### Appendix phase
-
-The default appendix preset expands to:
-
-- `bert_imdb`
-- `bert_sst2`
-- `distilbert_sst2`
-- `roberta_sentiment`
-- `vit_cifar10`
-- `swin_cifar10`
-
----
-
-## Release Artifacts
-
-The curated paper artifact bundle lives under:
-
-```text
-release_results/
-  README.md
-  artifact_sources.json
-  rq1/
-  rq2/
-  rq234_experiment.log
-  rq3/
-  rq4/
-```
-
-Its provenance is:
-
-- `release_results/rq1/` from `results/2026-03-28_1424_complete`
-- `release_results/rq2/`, `release_results/rq3/`, and `release_results/rq4/`
-  from `results/2026-03-21_0200_complete`
-
-This split bundle is the publication-facing artifact. The raw `results/`
-workspace is still useful for reruns and intermediate experiments.
-
----
-
-## Output Files
-
-Typical outputs in `results/<run_name>/`:
-
-```text
-experiment.log
-rq1.json
-rq1.jsonl
-rq2.jsonl
-rq3.jsonl
-rq1_heatmap_stealth.png
-rq1_feasibility_tradeoff.png
-rq2_fig1_disruption.png
-rq2_fig2_accuracy_drop.png
-rq2_fig3_tradeoff.png
-rq3_pareto_aggregate_all.png
-rq3_fig1_robustness_all.png
-rq3_fig2_tradeoff_all.png
-rq3_violin_stability.png
-rq3_heatmap_model_defense.png
-rq3_new_metrics_summary.md
-rq4_pareto_scatter.png
-rq4_pareto_summary.png
-rq4_fig1_aggregated_pareto.png
-rq4_fig2_robustness_bar.png
-rq4_appendix_variant_grid.png
-rq4_operating_points.csv
-table1_defense_comparison.md
-table1_defense_comparison.tex
-table2_attacker_robustness.md
-table2_attacker_robustness.tex
-```
-
-Logging details:
-
-- Shell-level execution trace is tee'd into `experiment.log`.
-- Python experiment runners also append structured logging to the same `experiment.log`.
-
----
-
-## Metrics
-
-| Metric | Meaning | Desired direction |
-|--------|---------|-------------------|
-| `post_recovery` | Post-defense payload bit accuracy | Lower is better |
-| `recovery_reduction` | `pre_recovery - post_recovery` | Higher is better |
-| `acc_drop` | Clean-to-defended task accuracy drop | Lower is better |
-| `relative_l2_distance` | Relative parameter-space perturbation | Lower is better |
-| `hamming_distance` | Bit distance between original and recovered payload | Higher is stronger disruption |
-| `wasserstein_distance` | Weight-distribution shift between clean and defended models | Trade-off indicator |
-
----
-
-## Reproducibility
-
-### Seed controls
-
-```bash
---seed 42
---eval_seed 42
---run_seed 1
-```
-
-- `eval_seed` controls evaluation sampling.
-- `run_seed` controls stochastic operations.
-- `seed` is a legacy convenience flag.
-
-### Paper payload hashes
-
-```bash
-LOW_ENTROPY_SHA256=c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88
-HIGH_ENTROPY_SHA256=5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0
-```
-
-### GrayShield keying
-
-For standalone CLI runs:
+Standalone CLI runs can set:
 
 ```bash
 export GRAYSHIELD_KEY=$(python -c "import secrets; print(secrets.token_hex(32))")
 export GRAYSHIELD_V3=1
 ```
 
-For `scripts/exps.sh`:
+`scripts/exps.sh` automatically creates `.grayshield_key` if absent and
+exports `GRAYSHIELD_V3=1`. The `.grayshield_key` file is ignored by Git and
+must not be committed.
 
-- `.grayshield_key` is auto-generated if absent
-- `GRAYSHIELD_KEY` is exported from that file
-- `GRAYSHIELD_V3=1` is enabled automatically
+## Anonymous Citation
 
-Do not commit `.grayshield_key`.
-
----
-
-## Project Layout
-
-```text
-scripts/
-  exps.sh
-  experiments.sh
-  generate_tables.py
-grayshield/
-  cli.py
-  config.py
-  defense/
-    gray_code.py
-    random_flip.py
-    pattern_mask.py
-    gaussian_noise.py
-    finetune.py
-    ptq.py
-    swp.py
-  experiments/
-    runner.py
-  lsb/
-    bits.py
-    stego.py
-  metrics/
-    payload.py
-    model.py
-    pareto.py
-  models/
-    factory.py
-    targets.py
-    tasks.py
-    checkpoint.py
-  payload/
-    loader.py
-    encoding.py
-    reed_solomon.py
-    malwarebazaar.py
-  visualization/
-    rq1.py
-    rq2.py
-    rq3.py
-    rq4.py
-    plots.py
-```
-
----
-
-## Safety
-
-This repository is for defensive research only.
-
-- The anonymous GitHub artifact does not ship executable malware samples.
-- Never execute downloaded malware payloads.
-- Use an isolated environment.
-- Treat payload files as opaque bytes only.
-- Review your local policies before downloading real malware samples.
-
----
-
-## Citation
-
-For double-blind submission, use the anonymous entry below:
+For double-blind review, cite the artifact as:
 
 ```bibtex
-@article{grayshield2026,
-  title={GrayShield: Gray-Code-Guided Bit-Level Sanitization for Transformer Models},
-  author={Anonymous Authors},
-  year={2026},
-  note={Anonymous repository: https://github.com/anonymousgrayshield/grayshield}
+@misc{anonymous2026grayshield,
+  title        = {GrayShield: Gray-Code-Guided Bit-Level Sanitization for Transformer Model Supply-Chain Security},
+  author       = {Anonymous Authors},
+  year         = {2026},
+  note         = {Anonymized NeurIPS 2026 review artifact},
+  howpublished = {\url{https://github.com/anonymousgrayshield/grayshield}}
 }
 ```
-
----
 
 ## License
 

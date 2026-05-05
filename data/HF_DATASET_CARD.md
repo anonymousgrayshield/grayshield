@@ -16,14 +16,15 @@ pretty_name: GrayShield Malware Payloads
 
 # GrayShield Malware Payloads
 
-This dataset mirrors the payload files used in the GrayShield artifact for
-research on LSB-based payload injection in Transformer weights and on
-post-training payload sanitization.
+This card documents the optional controlled anonymous dataset mirror for the
+GrayShield paper payloads. The public anonymous GitHub repository does not
+ship these payload binaries; it only includes this documentation and downloader
+scripts.
 
 ## Safety warning
 
-This repository contains real malware samples. Handle them only in isolated
-research environments.
+The controlled dataset mirror, when provided, contains real malware samples.
+Handle them only in isolated research environments.
 
 - Do not execute any file in this dataset.
 - Treat every sample as an opaque byte sequence.
@@ -52,8 +53,10 @@ appendix analyses.
 | `31f110e2...147f.zip.malware` | `zip` | 3645.034 | 7.974474 |
 | `9d5b59d0...b46e.apk.malware` | `apk` | 7068.168 | 7.603352 |
 
-The file `malware/metadata.json` records the exact filenames, hashes, sizes,
-entropies, and paper roles.
+If a controlled mirror is provided, its metadata file records the exact
+filenames, hashes, sizes, entropies, and paper roles. The public GitHub
+artifact instead rehydrates the exact payloads by SHA256 with
+`data/download_paper_payloads.py`.
 
 ## Source and preprocessing
 
@@ -67,10 +70,12 @@ GrayShield artifact they are never executed; the codebase only:
 ## How to reproduce the paper payload setup
 
 The public anonymous GitHub repository does not ship the executable payload
-binaries.  If approved for your review environment, rehydrate them from the
+binaries. If approved for your review environment and an anonymous dataset
+identifier is provided with the review package, rehydrate them from the
 anonymous dataset mirror with:
 
 ```bash
+export GRAYSHIELD_HF_DATASET_ID=<anonymous-dataset-id>
 python data/download_from_hf.py
 ```
 

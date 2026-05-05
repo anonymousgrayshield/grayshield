@@ -6,6 +6,7 @@ cd "$ROOT"
 
 export PYTHONPATH="$ROOT:${PYTHONPATH:-}"
 export MPLBACKEND=Agg
+export MALWAREBAZAAR_API_KEY="${MALWAREBAZAAR_API_KEY:-reviewer-smoke-placeholder}"
 
 echo "[smoke] CLI import"
 python -m grayshield.cli --help >/dev/null

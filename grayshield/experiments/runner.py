@@ -1737,8 +1737,18 @@ def run_rq4(
     from ..visualization.rq4 import load_rq2_rq3_results
     from ..visualization.plots import plot_rq4_pareto_scatter, plot_rq4_strategy_summary
 
-    # Collect all points from RQ2/RQ3 results
-    all_points = load_rq2_rq3_results(results_dir)
+    # Collect all points from RQ2/RQ3 results.  Newer visualization helpers
+    # return (points, found_counts); older callers expected points only.
+    loaded = load_rq2_rq3_results(results_dir)
+    if isinstance(loaded, tuple):
+        all_points, found_counts = loaded
+        logger.info(
+            "Found RQ result files: rq2=%s, rq3=%s",
+            found_counts.get("rq2", 0),
+            found_counts.get("rq3", 0),
+        )
+    else:
+        all_points = loaded
 
     if not all_points:
         logger.warning("No RQ2/RQ3 points found.")
