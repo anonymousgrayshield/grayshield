@@ -108,8 +108,24 @@ GrayShield sanitization, and table regeneration from `release_results/`.
 ### 2. Optional: rehydrate paper payloads in a controlled environment
 
 The main-paper payloads are real MalwareBazaar samples and should be handled
-only in an isolated research environment.  For double-blind review, use the
-anonymous dataset identifier provided with the submission package:
+only in an isolated research environment. The preferred reviewer path is to
+download the exact paper payloads by SHA256 from MalwareBazaar:
+
+```bash
+export MALWAREBAZAAR_API_KEY=<optional-api-key>
+python data/download_paper_payloads.py
+```
+
+This writes the two main-paper samples into `data/malware/`, where
+`scripts/exps.sh --phase main` will find them automatically. To also fetch
+the four supplementary appendix payloads:
+
+```bash
+python data/download_paper_payloads.py --appendix
+```
+
+A controlled anonymous dataset mirror can also be used when provided with the
+submission package:
 
 ```bash
 export GRAYSHIELD_HF_DATASET_ID=<anonymous-dataset-id>
@@ -272,8 +288,8 @@ Important behavior:
 - With `--phase main`, the scripts ignore `--task-type` and use the fixed main-paper model set.
 - Main-phase paper reruns use the two SHA256-matched payloads under
   `data/malware` by default.  These files are not included in the public
-  anonymous GitHub repository; rehydrate them only through the controlled
-  anonymous dataset channel.
+  anonymous GitHub repository; rehydrate them from MalwareBazaar by hash or
+  through the controlled anonymous dataset channel.
 - `RQ4` aggregates results already written by `RQ2` and `RQ3`.
 
 ---

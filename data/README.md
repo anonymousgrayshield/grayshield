@@ -11,9 +11,10 @@ payload injection and post-training sanitization in GrayShield.
   the paper payload set.
 - Use them only in isolated research environments.
 
-The complete paper payload bundle uses real MalwareBazaar samples.  Rehydrate
-those files only through the controlled anonymous dataset channel described
-below, and only inside an isolated research environment.
+The complete paper payload bundle uses real MalwareBazaar samples. Rehydrate
+those files only by SHA256 from MalwareBazaar or through the controlled
+anonymous dataset mirror described below, and only inside an isolated research
+environment.
 
 ## What the paper uses
 
@@ -49,6 +50,7 @@ data/
 |-- HF_DATASET_CARD.md
 |-- benign_payload.bin
 |-- test_payload.bin
+|-- download_paper_payloads.py
 |-- download_from_hf.py
 `-- malware/
     |-- .keep
@@ -60,6 +62,27 @@ data/
   anonymous dataset card and reproducibility notes.
 - `malware/manifest.json` contains MalwareBazaar download metadata for the
   subset fetched directly from the source API.
+
+## Preferred: rehydrate from MalwareBazaar by SHA256
+
+The preferred reviewer path avoids redistributing malware while preserving
+exact reproducibility. In an isolated VM/container, run:
+
+```bash
+export MALWAREBAZAAR_API_KEY=<optional-api-key>
+python data/download_paper_payloads.py
+```
+
+This downloads and verifies the two main-paper payloads by SHA256. To also
+download the supplementary appendix payloads:
+
+```bash
+python data/download_paper_payloads.py --appendix
+```
+
+The script writes `.malware` files into `data/malware/` and records a local
+`paper_payload_manifest.json`. The experiment scripts then discover the
+main-paper payloads automatically through their SHA256 hashes.
 
 ## Optional controlled dataset mirror
 
