@@ -1,0 +1,4 @@
+Operating Point,Method,Strength,Bit Accuracy (%),Recovery Reduction (%),Accuracy Drop (%),Relative L2
+Recommended,GrayShield,x=19,51.4,48.6,-0.39,1.89e-02
+Reference-HighRR,PatternMask,pat=1111111111111111111,44.8,55.2,0.00,N/A
+Reference-MidFront,PatternMask,pat=1010101010101010101,48.6,51.4,0.00,N/A

@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment
+.env
+.venv
+env/
+venv/
+.conda/
+
+# IDE
+.vscode/
+.idea/
+
+# BitShield Results
+results/
+test_results*/
+*.log
+*.png
+*.jsonl
+results_backup/
+
+# Payloads (exclude actual malware)
+data/malware/*
+!data/malware/.keep
+payloads/
+
+# Checkpoints
+checkpoints/
+*.pt
+*.pth
+*.bin
+backup/CHANGELOG_PATHS.md
+/backup/
+*.nfs*
+#others
+*.pdf
+.grayshield_key
+SKILLS/
+tai2026.tex

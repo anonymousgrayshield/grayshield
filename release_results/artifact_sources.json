@@ -1,0 +1,185 @@
+{
+  "bundle": "release_results",
+  "sources": {
+    "rq1": "results/2026-03-28_1424_complete",
+    "rq234": "results/2026-03-21_0200_complete"
+  },
+  "files": {
+    "rq2/random_flip_recovery_curve.png": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "random_flip_recovery_curve.png"
+    },
+    "rq2/rq2.json": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "rq2.json"
+    },
+    "rq2/rq2.jsonl": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "rq2.jsonl"
+    },
+    "rq2/rq2_fig1_disruption.png": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "rq2_fig1_disruption.png"
+    },
+    "rq2/rq2_fig2_accuracy_drop.png": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "rq2_fig2_accuracy_drop.png"
+    },
+    "rq2/rq2_fig3_tradeoff.png": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "rq2_fig3_tradeoff.png"
+    },
+    "rq3/rq3.json": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "rq3.json"
+    },
+    "rq3/rq3.jsonl": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "rq3.jsonl"
+    },
+    "rq3/rq3_fig1_robustness_all.png": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "rq3_fig1_robustness_all.png"
+    },
+    "rq3/rq3_fig1_robustness_cv.png": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "rq3_fig1_robustness_cv.png"
+    },
+    "rq3/rq3_fig1_robustness_nlp.png": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "rq3_fig1_robustness_nlp.png"
+    },
+    "rq3/rq3_fig2_tradeoff_all.png": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "rq3_fig2_tradeoff_all.png"
+    },
+    "rq3/rq3_fig2_tradeoff_cv.png": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "rq3_fig2_tradeoff_cv.png"
+    },
+    "rq3/rq3_fig2_tradeoff_nlp.png": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "rq3_fig2_tradeoff_nlp.png"
+    },
+    "rq3/rq3_heatmap_model_defense.png": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "rq3_heatmap_model_defense.png"
+    },
+    "rq3/rq3_new_metrics_summary.md": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "rq3_new_metrics_summary.md"
+    },
+    "rq3/rq3_pareto_aggregate_all.png": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "rq3_pareto_aggregate_all.png"
+    },
+    "rq3/rq3_pareto_aggregate_cv.png": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "rq3_pareto_aggregate_cv.png"
+    },
+    "rq3/rq3_pareto_aggregate_nlp.png": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "rq3_pareto_aggregate_nlp.png"
+    },
+    "rq3/rq3_pareto_bert_sst2.png": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "rq3_pareto_bert_sst2.png"
+    },
+    "rq3/rq3_pareto_roberta_sentiment.png": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "rq3_pareto_roberta_sentiment.png"
+    },
+    "rq3/rq3_pareto_vit_cifar10.png": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "rq3_pareto_vit_cifar10.png"
+    },
+    "rq3/rq3_tradeoff_2x2_all.png": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "rq3_tradeoff_2x2_all.png"
+    },
+    "rq3/rq3_violin_stability.png": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "rq3_violin_stability.png"
+    },
+    "rq4/rq4.jsonl": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "rq4.jsonl"
+    },
+    "rq4/rq4_appendix_variant_grid.png": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "rq4_appendix_variant_grid.png"
+    },
+    "rq4/rq4_fig1_aggregated_pareto.png": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "rq4_fig1_aggregated_pareto.png"
+    },
+    "rq4/rq4_fig2_robustness_bar.png": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "rq4_fig2_robustness_bar.png"
+    },
+    "rq4/rq4_operating_points.csv": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "rq4_operating_points.csv"
+    },
+    "rq4/rq4_pareto_scatter.png": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "rq4_pareto_scatter.png"
+    },
+    "rq4/rq4_pareto_summary.png": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "rq4_pareto_summary.png"
+    },
+    "rq3/summary.json": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "summary.json"
+    },
+    "rq3/table1_defense_comparison.md": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "table1_defense_comparison.md"
+    },
+    "rq3/table1_defense_comparison.tex": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "table1_defense_comparison.tex"
+    },
+    "rq3/table2_attacker_robustness.md": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "table2_attacker_robustness.md"
+    },
+    "rq3/table2_attacker_robustness.tex": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "table2_attacker_robustness.tex"
+    },
+    "rq1/rq1.json": {
+      "source_dir": "results/2026-03-28_1424_complete",
+      "source_file": "rq1.json"
+    },
+    "rq1/rq1.jsonl": {
+      "source_dir": "results/2026-03-28_1424_complete",
+      "source_file": "rq1.jsonl"
+    },
+    "rq1/rq1_clean_vs_poisoned.png": {
+      "source_dir": "results/2026-03-28_1424_complete",
+      "source_file": "rq1_clean_vs_poisoned.png"
+    },
+    "rq1/rq1_feasibility_tradeoff.png": {
+      "source_dir": "results/2026-03-28_1424_complete",
+      "source_file": "rq1_feasibility_tradeoff.png"
+    },
+    "rq1/rq1_heatmap_lsb_similarity.png": {
+      "source_dir": "results/2026-03-28_1424_complete",
+      "source_file": "rq1_heatmap_lsb_similarity.png"
+    },
+    "rq1/rq1_heatmap_stealth.png": {
+      "source_dir": "results/2026-03-28_1424_complete",
+      "source_file": "rq1_heatmap_stealth.png"
+    },
+    "rq2/rq234_experiment.log": {
+      "source_dir": "results/2026-03-21_0200_complete",
+      "source_file": "experiment.log"
+    },
+    "rq1/rq1_experiment.log": {
+      "source_dir": "results/2026-03-28_1424_complete",
+      "source_file": "experiment.log"
+    }
+  }
+}

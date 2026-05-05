@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\caption{Defense Strategy Comparison (RQ3 Summary)}
+\label{tab:defense_comparison}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Defense} & \textbf{Avg RR\%} & \textbf{Std Dev} & \textbf{Acc Drop\%} & \textbf{Time (ms)} & \textbf{Consistency} \\
+\midrule
+\textbf{PatternMask} & 50.00 & 3.25 & 0.134 & 44 & 94/100 \\
+\textbf{GrayShield} & 49.96 & 0.66 & -0.098 & 54 & 99/100 \\
+\textbf{PTQ} & 49.83 & 0.54 & 0.166 & 882 & 99/100 \\
+\textbf{FineTune} & 45.51 & 1.23 & 0.449 & 13221 & 97/100 \\
+GaussianNoise & 38.25 & 5.85 & -0.037 & 620 & 85/100 \\
+SWP & 8.76 & 2.56 & 0.068 & 1483 & 71/100 \\
+RandomFlip & 1.73 & 3.16 & 0.018 & 2590 & 0/100 \\
+\bottomrule
+\end{tabular}
+\vspace{0.1cm}
+\\
+\footnotesize{RR = Recovery Reduction (higher is better). Consistency measures stability across models.}
+\end{table}

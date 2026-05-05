@@ -1,0 +1,4632 @@
+[
+  {
+    "rq": "RQ1",
+    "model_preset": "bert_sst2",
+    "task": "sst2",
+    "x": 4,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 72,
+    "target_prefixes": [
+      "bert.encoder.layer"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 339738624,
+    "capacity_kb": 41472.0,
+    "capacity_used": 1.0,
+    "payload": {
+      "path": "payloads/malware/c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88.js.malware",
+      "sha256": "c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88",
+      "file_type": "malware",
+      "n_bits": 1100128
+    },
+    "inject_report": {
+      "bert.encoder.layer.0.attention.self.query.weight": 1100128
+    },
+    "injection_summary": {
+      "payload_bits_total": 1100128,
+      "written_bits_total": 1100128,
+      "truncated": false,
+      "capacity_used": 1.0
+    },
+    "total_injected_bits": 1100128,
+    "metrics": {
+      "bit_accuracy": 1.0,
+      "lsb_similarity": 1.0,
+      "exact_recovery": true,
+      "hash_match": true,
+      "bit_accuracy_strict": 1.0,
+      "exact_recovery_strict": true,
+      "original_bits_count": 1100128,
+      "recovered_bits_count": 1100128,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 1.0,
+      "correct_bytes": 137516,
+      "total_bytes": 137516,
+      "cosine_similarity": 0.9999999999999993,
+      "weight_norm_ratio": 1.0,
+      "l2_distance": 1.206622505286964e-05,
+      "relative_l2_distance": 3.3740118881198485e-08,
+      "wasserstein_distance": 4.6227407318744085e-11,
+      "hamming_distance": 0,
+      "logits_kl": 7.941934780844927e-14,
+      "top1_agreement": 1.0,
+      "logits_mse": 5.702310097634861e-13,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 4.172325134277344e-06,
+      "mean_logit_diff": 4.955509211868048e-07,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.919921875,
+      "post_inject_acc": 0.919921875,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 0.7373626846820116,
+      "injection_seconds": 0.16557461069896817,
+      "post_inject_eval_seconds": 0.9290723786689341
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "bert_sst2",
+    "task": "sst2",
+    "x": 8,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 72,
+    "target_prefixes": [
+      "bert.encoder.layer"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 679477248,
+    "capacity_kb": 82944.0,
+    "capacity_used": 1.0,
+    "payload": {
+      "path": "payloads/malware/c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88.js.malware",
+      "sha256": "c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88",
+      "file_type": "malware",
+      "n_bits": 1100128
+    },
+    "inject_report": {
+      "bert.encoder.layer.0.attention.self.query.weight": 1100128
+    },
+    "injection_summary": {
+      "payload_bits_total": 1100128,
+      "written_bits_total": 1100128,
+      "truncated": false,
+      "capacity_used": 1.0
+    },
+    "total_injected_bits": 1100128,
+    "metrics": {
+      "bit_accuracy": 1.0,
+      "lsb_similarity": 1.0,
+      "exact_recovery": true,
+      "hash_match": true,
+      "bit_accuracy_strict": 1.0,
+      "exact_recovery_strict": true,
+      "original_bits_count": 1100128,
+      "recovered_bits_count": 1100128,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 1.0,
+      "correct_bytes": 137516,
+      "total_bytes": 137516,
+      "cosine_similarity": 0.9999999999999407,
+      "weight_norm_ratio": 0.9999999940738236,
+      "l2_distance": 0.00012305346794599253,
+      "relative_l2_distance": 3.440876180453909e-07,
+      "wasserstein_distance": 3.285532956809334e-10,
+      "hamming_distance": 0,
+      "logits_kl": 1.3716802360134477e-13,
+      "top1_agreement": 1.0,
+      "logits_mse": 8.218116129016934e-13,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 6.079673767089844e-06,
+      "mean_logit_diff": 5.605470505543053e-07,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.919921875,
+      "post_inject_acc": 0.919921875,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 0.6842741561122239,
+      "injection_seconds": 0.144195097964257,
+      "post_inject_eval_seconds": 0.45160263404250145
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "bert_sst2",
+    "task": "sst2",
+    "x": 16,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 72,
+    "target_prefixes": [
+      "bert.encoder.layer"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 1358954496,
+    "capacity_kb": 165888.0,
+    "capacity_used": 1.0,
+    "payload": {
+      "path": "payloads/malware/c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88.js.malware",
+      "sha256": "c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88",
+      "file_type": "malware",
+      "n_bits": 1100128
+    },
+    "inject_report": {
+      "bert.encoder.layer.0.attention.self.query.weight": 1100128
+    },
+    "injection_summary": {
+      "payload_bits_total": 1100128,
+      "written_bits_total": 1100128,
+      "truncated": false,
+      "capacity_used": 1.0
+    },
+    "total_injected_bits": 1100128,
+    "metrics": {
+      "bit_accuracy": 1.0,
+      "lsb_similarity": 1.0,
+      "exact_recovery": true,
+      "hash_match": true,
+      "bit_accuracy_strict": 1.0,
+      "exact_recovery_strict": true,
+      "original_bits_count": 1100128,
+      "recovered_bits_count": 1100128,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 1.0,
+      "correct_bytes": 137516,
+      "total_bytes": 137516,
+      "cosine_similarity": 0.9999999984256616,
+      "weight_norm_ratio": 0.9999993254296629,
+      "l2_distance": 0.020068743451473654,
+      "relative_l2_distance": 5.611711922180324e-05,
+      "wasserstein_distance": 2.6499270333602e-08,
+      "hamming_distance": 0,
+      "logits_kl": 2.7137401593658886e-10,
+      "top1_agreement": 1.0,
+      "logits_mse": 1.5541004802499536e-09,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 0.00036966800689697266,
+      "mean_logit_diff": 2.0838486307184212e-05,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.919921875,
+      "post_inject_acc": 0.919921875,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 0.6617855061776936,
+      "injection_seconds": 0.13366861827671528,
+      "post_inject_eval_seconds": 0.4536842489615083
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "bert_sst2",
+    "task": "sst2",
+    "x": 19,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 72,
+    "target_prefixes": [
+      "bert.encoder.layer"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 1613758464,
+    "capacity_kb": 196992.0,
+    "capacity_used": 0.9999918191337736,
+    "payload": {
+      "path": "payloads/malware/c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88.js.malware",
+      "sha256": "c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88",
+      "file_type": "malware",
+      "n_bits": 1100128
+    },
+    "inject_report": {
+      "bert.encoder.layer.0.attention.self.query.weight": 1100119
+    },
+    "injection_summary": {
+      "payload_bits_total": 1100128,
+      "written_bits_total": 1100119,
+      "truncated": true,
+      "capacity_used": 0.9999918191337736
+    },
+    "total_injected_bits": 1100119,
+    "metrics": {
+      "bit_accuracy": 0.9999972730445912,
+      "lsb_similarity": 0.9999972730445912,
+      "exact_recovery": false,
+      "hash_match": false,
+      "bit_accuracy_strict": 0.9999972730445912,
+      "exact_recovery_strict": false,
+      "original_bits_count": 1100128,
+      "recovered_bits_count": 1100128,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 0.9999854562378196,
+      "correct_bytes": 137514,
+      "total_bytes": 137516,
+      "cosine_similarity": 0.9999998868928706,
+      "weight_norm_ratio": 0.9999986667126399,
+      "l2_distance": 0.17009291316914094,
+      "relative_l2_distance": 0.000475621421449563,
+      "wasserstein_distance": 4.66489531447678e-08,
+      "hamming_distance": 3,
+      "logits_kl": 1.5670319817299768e-08,
+      "top1_agreement": 1.0,
+      "logits_mse": 1.1936124694189587e-07,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 0.002924680709838867,
+      "mean_logit_diff": 0.0001790225242075394,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.919921875,
+      "post_inject_acc": 0.919921875,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 1.1948972619138658,
+      "injection_seconds": 0.13407310796901584,
+      "post_inject_eval_seconds": 0.9492009920068085
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "bert_sst2",
+    "task": "sst2",
+    "x": 21,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 72,
+    "target_prefixes": [
+      "bert.encoder.layer"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 1783627776,
+    "capacity_kb": 217728.0,
+    "capacity_used": 0.9999990910148637,
+    "payload": {
+      "path": "payloads/malware/c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88.js.malware",
+      "sha256": "c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88",
+      "file_type": "malware",
+      "n_bits": 1100128
+    },
+    "inject_report": {
+      "bert.encoder.layer.0.attention.self.query.weight": 1100127
+    },
+    "injection_summary": {
+      "payload_bits_total": 1100128,
+      "written_bits_total": 1100127,
+      "truncated": true,
+      "capacity_used": 0.9999990910148637
+    },
+    "total_injected_bits": 1100127,
+    "metrics": {
+      "bit_accuracy": 0.9999990910148637,
+      "lsb_similarity": 0.9999990910148637,
+      "exact_recovery": false,
+      "hash_match": false,
+      "bit_accuracy_strict": 0.9999990910148637,
+      "exact_recovery_strict": false,
+      "original_bits_count": 1100128,
+      "recovered_bits_count": 1100128,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 0.9999927281189098,
+      "correct_bytes": 137515,
+      "total_bytes": 137516,
+      "cosine_similarity": 0.9999984209379917,
+      "weight_norm_ratio": 0.9999990271737589,
+      "l2_distance": 0.6355346950496343,
+      "relative_l2_distance": 0.0017771105768494863,
+      "wasserstein_distance": 1.2812942884465883e-07,
+      "hamming_distance": 1,
+      "logits_kl": 3.6293201001270954e-07,
+      "top1_agreement": 1.0,
+      "logits_mse": 1.7269636192196458e-06,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 0.01187986135482788,
+      "mean_logit_diff": 0.0006758102790627163,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.919921875,
+      "post_inject_acc": 0.919921875,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 0.5924552697688341,
+      "injection_seconds": 0.13357340125367045,
+      "post_inject_eval_seconds": 0.5518643450923264
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "bert_sst2",
+    "task": "sst2",
+    "x": 23,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 72,
+    "target_prefixes": [
+      "bert.encoder.layer"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 1953497088,
+    "capacity_kb": 238464.0,
+    "capacity_used": 0.9999863652229559,
+    "payload": {
+      "path": "payloads/malware/c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88.js.malware",
+      "sha256": "c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88",
+      "file_type": "malware",
+      "n_bits": 1100128
+    },
+    "inject_report": {
+      "bert.encoder.layer.0.attention.self.query.weight": 1100113
+    },
+    "injection_summary": {
+      "payload_bits_total": 1100128,
+      "written_bits_total": 1100113,
+      "truncated": true,
+      "capacity_used": 0.9999863652229559
+    },
+    "total_injected_bits": 1100113,
+    "metrics": {
+      "bit_accuracy": 0.9999936371040461,
+      "lsb_similarity": 0.9999936371040461,
+      "exact_recovery": false,
+      "hash_match": false,
+      "bit_accuracy_strict": 0.9999936371040461,
+      "exact_recovery_strict": false,
+      "original_bits_count": 1100128,
+      "recovered_bits_count": 1100128,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 0.9999854562378196,
+      "correct_bytes": 137514,
+      "total_bytes": 137516,
+      "cosine_similarity": 0.9999774619428383,
+      "weight_norm_ratio": 1.0000455742284644,
+      "l2_distance": 2.4011425954219803,
+      "relative_l2_distance": 0.006714182460982676,
+      "wasserstein_distance": 9.435840979676868e-07,
+      "hamming_distance": 7,
+      "logits_kl": 4.446434848280278e-06,
+      "top1_agreement": 1.0,
+      "logits_mse": 2.435082171103886e-05,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 0.04288727045059204,
+      "mean_logit_diff": 0.0026007638516603038,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.919921875,
+      "post_inject_acc": 0.919921875,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 0.9360952950082719,
+      "injection_seconds": 0.1425487599335611,
+      "post_inject_eval_seconds": 0.6886661401949823
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "bert_sst2",
+    "task": "sst2",
+    "x": 4,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 72,
+    "target_prefixes": [
+      "bert.encoder.layer"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 339738624,
+    "capacity_kb": 41472.0,
+    "capacity_used": 1.0,
+    "payload": {
+      "path": "payloads/malware/5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0.exe.malware",
+      "sha256": "5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0",
+      "file_type": "malware",
+      "n_bits": 73493568
+    },
+    "inject_report": {
+      "bert.encoder.layer.0.attention.self.query.weight": 2359296,
+      "bert.encoder.layer.0.attention.self.key.weight": 2359296,
+      "bert.encoder.layer.0.attention.self.value.weight": 2359296,
+      "bert.encoder.layer.0.attention.output.dense.weight": 2359296,
+      "bert.encoder.layer.0.intermediate.dense.weight": 9437184,
+      "bert.encoder.layer.0.output.dense.weight": 9437184,
+      "bert.encoder.layer.1.attention.self.query.weight": 2359296,
+      "bert.encoder.layer.1.attention.self.key.weight": 2359296,
+      "bert.encoder.layer.1.attention.self.value.weight": 2359296,
+      "bert.encoder.layer.1.attention.output.dense.weight": 2359296,
+      "bert.encoder.layer.1.intermediate.dense.weight": 9437184,
+      "bert.encoder.layer.1.output.dense.weight": 9437184,
+      "bert.encoder.layer.2.attention.self.query.weight": 2359296,
+      "bert.encoder.layer.2.attention.self.key.weight": 2359296,
+      "bert.encoder.layer.2.attention.self.value.weight": 2359296,
+      "bert.encoder.layer.2.attention.output.dense.weight": 2359296,
+      "bert.encoder.layer.2.intermediate.dense.weight": 7433280
+    },
+    "injection_summary": {
+      "payload_bits_total": 73493568,
+      "written_bits_total": 73493568,
+      "truncated": false,
+      "capacity_used": 1.0
+    },
+    "total_injected_bits": 73493568,
+    "metrics": {
+      "bit_accuracy": 1.0,
+      "lsb_similarity": 1.0,
+      "exact_recovery": true,
+      "hash_match": true,
+      "bit_accuracy_strict": 1.0,
+      "exact_recovery_strict": true,
+      "original_bits_count": 73493568,
+      "recovered_bits_count": 73493568,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 1.0,
+      "correct_bytes": 9186696,
+      "total_bytes": 9186696,
+      "cosine_similarity": 0.9999999999999659,
+      "weight_norm_ratio": 0.9999999976373426,
+      "l2_distance": 9.33377266602161e-05,
+      "relative_l2_distance": 2.609951314365331e-07,
+      "wasserstein_distance": 1.7262040685750435e-09,
+      "hamming_distance": 0,
+      "logits_kl": 1.8750496397920515e-13,
+      "top1_agreement": 1.0,
+      "logits_mse": 9.435868021179586e-13,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 7.3909759521484375e-06,
+      "mean_logit_diff": 5.727815732825547e-07,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.919921875,
+      "post_inject_acc": 0.919921875,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 0.9588728756643832,
+      "injection_seconds": 11.152882535941899,
+      "post_inject_eval_seconds": 0.46124810725450516
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "bert_sst2",
+    "task": "sst2",
+    "x": 8,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 72,
+    "target_prefixes": [
+      "bert.encoder.layer"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 679477248,
+    "capacity_kb": 82944.0,
+    "capacity_used": 1.0,
+    "payload": {
+      "path": "payloads/malware/5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0.exe.malware",
+      "sha256": "5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0",
+      "file_type": "malware",
+      "n_bits": 73493568
+    },
+    "inject_report": {
+      "bert.encoder.layer.0.attention.self.query.weight": 4718592,
+      "bert.encoder.layer.0.attention.self.key.weight": 4718592,
+      "bert.encoder.layer.0.attention.self.value.weight": 4718592,
+      "bert.encoder.layer.0.attention.output.dense.weight": 4718592,
+      "bert.encoder.layer.0.intermediate.dense.weight": 18874368,
+      "bert.encoder.layer.0.output.dense.weight": 18874368,
+      "bert.encoder.layer.1.attention.self.query.weight": 4718592,
+      "bert.encoder.layer.1.attention.self.key.weight": 4718592,
+      "bert.encoder.layer.1.attention.self.value.weight": 4718592,
+      "bert.encoder.layer.1.attention.output.dense.weight": 2714688
+    },
+    "injection_summary": {
+      "payload_bits_total": 73493568,
+      "written_bits_total": 73493568,
+      "truncated": false,
+      "capacity_used": 1.0
+    },
+    "total_injected_bits": 73493568,
+    "metrics": {
+      "bit_accuracy": 1.0,
+      "lsb_similarity": 1.0,
+      "exact_recovery": true,
+      "hash_match": true,
+      "bit_accuracy_strict": 1.0,
+      "exact_recovery_strict": true,
+      "original_bits_count": 73493568,
+      "recovered_bits_count": 73493568,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 1.0,
+      "correct_bytes": 9186696,
+      "total_bytes": 9186696,
+      "cosine_similarity": 0.9999999999958122,
+      "weight_norm_ratio": 1.0000000019913986,
+      "l2_distance": 0.0010349476177267736,
+      "relative_l2_distance": 2.8939668790289854e-06,
+      "wasserstein_distance": 5.920587575758418e-09,
+      "hamming_distance": 0,
+      "logits_kl": 2.9796178903568776e-12,
+      "top1_agreement": 1.0,
+      "logits_mse": 2.1989786307499183e-11,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 3.6835670471191406e-05,
+      "mean_logit_diff": 2.6037841962534003e-06,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.919921875,
+      "post_inject_acc": 0.919921875,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 1.0753183150663972,
+      "injection_seconds": 9.51465773023665,
+      "post_inject_eval_seconds": 0.4556403420865536
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "bert_sst2",
+    "task": "sst2",
+    "x": 16,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 72,
+    "target_prefixes": [
+      "bert.encoder.layer"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 1358954496,
+    "capacity_kb": 165888.0,
+    "capacity_used": 1.0,
+    "payload": {
+      "path": "payloads/malware/5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0.exe.malware",
+      "sha256": "5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0",
+      "file_type": "malware",
+      "n_bits": 73493568
+    },
+    "inject_report": {
+      "bert.encoder.layer.0.attention.self.query.weight": 9437184,
+      "bert.encoder.layer.0.attention.self.key.weight": 9437184,
+      "bert.encoder.layer.0.attention.self.value.weight": 9437184,
+      "bert.encoder.layer.0.attention.output.dense.weight": 9437184,
+      "bert.encoder.layer.0.intermediate.dense.weight": 35744832
+    },
+    "injection_summary": {
+      "payload_bits_total": 73493568,
+      "written_bits_total": 73493568,
+      "truncated": false,
+      "capacity_used": 1.0
+    },
+    "total_injected_bits": 73493568,
+    "metrics": {
+      "bit_accuracy": 1.0,
+      "lsb_similarity": 1.0,
+      "exact_recovery": true,
+      "hash_match": true,
+      "bit_accuracy_strict": 1.0,
+      "exact_recovery_strict": true,
+      "original_bits_count": 73493568,
+      "recovered_bits_count": 73493568,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 1.0,
+      "correct_bytes": 9186696,
+      "total_bytes": 9186696,
+      "cosine_similarity": 0.9999998603013717,
+      "weight_norm_ratio": 1.0000000081859792,
+      "l2_distance": 0.18903224258131512,
+      "relative_l2_distance": 0.0005285804225536377,
+      "wasserstein_distance": 1.1243182740372504e-07,
+      "hamming_distance": 0,
+      "logits_kl": 1.2870182226156663e-07,
+      "top1_agreement": 1.0,
+      "logits_mse": 7.748754962122462e-07,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 0.007373154163360596,
+      "mean_logit_diff": 0.00047725856347824447,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.919921875,
+      "post_inject_acc": 0.919921875,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 0.8617376550100744,
+      "injection_seconds": 8.78480138676241,
+      "post_inject_eval_seconds": 0.9278776976279914
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "bert_sst2",
+    "task": "sst2",
+    "x": 19,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 72,
+    "target_prefixes": [
+      "bert.encoder.layer"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 1613758464,
+    "capacity_kb": 196992.0,
+    "capacity_used": 0.999999863933671,
+    "payload": {
+      "path": "payloads/malware/5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0.exe.malware",
+      "sha256": "5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0",
+      "file_type": "malware",
+      "n_bits": 73493568
+    },
+    "inject_report": {
+      "bert.encoder.layer.0.attention.self.query.weight": 11206656,
+      "bert.encoder.layer.0.attention.self.key.weight": 11206656,
+      "bert.encoder.layer.0.attention.self.value.weight": 11206656,
+      "bert.encoder.layer.0.attention.output.dense.weight": 11206656,
+      "bert.encoder.layer.0.intermediate.dense.weight": 28666934
+    },
+    "injection_summary": {
+      "payload_bits_total": 73493568,
+      "written_bits_total": 73493558,
+      "truncated": true,
+      "capacity_used": 0.999999863933671
+    },
+    "total_injected_bits": 73493558,
+    "metrics": {
+      "bit_accuracy": 0.9999999455734684,
+      "lsb_similarity": 0.9999999455734684,
+      "exact_recovery": false,
+      "hash_match": false,
+      "bit_accuracy_strict": 0.9999999455734684,
+      "exact_recovery_strict": false,
+      "original_bits_count": 73493568,
+      "recovered_bits_count": 73493568,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 0.9999997822938737,
+      "correct_bytes": 9186694,
+      "total_bytes": 9186696,
+      "cosine_similarity": 0.9999925369547115,
+      "weight_norm_ratio": 1.0000089018144396,
+      "l2_distance": 1.3816591992260803,
+      "relative_l2_distance": 0.0038634573307666526,
+      "wasserstein_distance": 5.90787806231674e-07,
+      "hamming_distance": 4,
+      "logits_kl": 8.705742540606698e-06,
+      "top1_agreement": 1.0,
+      "logits_mse": 4.266595523461092e-05,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 0.045075416564941406,
+      "mean_logit_diff": 0.0035103768823319115,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.919921875,
+      "post_inject_acc": 0.919921875,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 0.9575567110441625,
+      "injection_seconds": 8.719250115100294,
+      "post_inject_eval_seconds": 0.8096191263757646
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "bert_sst2",
+    "task": "sst2",
+    "x": 21,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 72,
+    "target_prefixes": [
+      "bert.encoder.layer"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 1783627776,
+    "capacity_kb": 217728.0,
+    "capacity_used": 0.9999997959005066,
+    "payload": {
+      "path": "payloads/malware/5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0.exe.malware",
+      "sha256": "5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0",
+      "file_type": "malware",
+      "n_bits": 73493568
+    },
+    "inject_report": {
+      "bert.encoder.layer.0.attention.self.query.weight": 12386304,
+      "bert.encoder.layer.0.attention.self.key.weight": 12386304,
+      "bert.encoder.layer.0.attention.self.value.weight": 12386304,
+      "bert.encoder.layer.0.attention.output.dense.weight": 12386304,
+      "bert.encoder.layer.0.intermediate.dense.weight": 23948337
+    },
+    "injection_summary": {
+      "payload_bits_total": 73493568,
+      "written_bits_total": 73493553,
+      "truncated": true,
+      "capacity_used": 0.9999997959005066
+    },
+    "total_injected_bits": 73493553,
+    "metrics": {
+      "bit_accuracy": 0.999999877540304,
+      "lsb_similarity": 0.999999877540304,
+      "exact_recovery": false,
+      "hash_match": false,
+      "bit_accuracy_strict": 0.999999877540304,
+      "exact_recovery_strict": false,
+      "original_bits_count": 73493568,
+      "recovered_bits_count": 73493568,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 0.9999997822938737,
+      "correct_bytes": 9186694,
+      "total_bytes": 9186696,
+      "cosine_similarity": 0.9998921472722035,
+      "weight_norm_ratio": 1.000265505927298,
+      "l2_distance": 5.25392612609507,
+      "relative_l2_distance": 0.014691263531946443,
+      "wasserstein_distance": 5.808015885122586e-06,
+      "hamming_distance": 9,
+      "logits_kl": 0.00010012482852571542,
+      "top1_agreement": 1.0,
+      "logits_mse": 0.0006279400738549157,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 0.21886205673217773,
+      "mean_logit_diff": 0.013105785503285006,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.919921875,
+      "post_inject_acc": 0.919921875,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 1.3578774058260024,
+      "injection_seconds": 8.514267111662775,
+      "post_inject_eval_seconds": 0.46301859989762306
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "bert_sst2",
+    "task": "sst2",
+    "x": 23,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 72,
+    "target_prefixes": [
+      "bert.encoder.layer"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 1953497088,
+    "capacity_kb": 238464.0,
+    "capacity_used": 0.9999998367204053,
+    "payload": {
+      "path": "payloads/malware/5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0.exe.malware",
+      "sha256": "5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0",
+      "file_type": "malware",
+      "n_bits": 73493568
+    },
+    "inject_report": {
+      "bert.encoder.layer.0.attention.self.query.weight": 13565952,
+      "bert.encoder.layer.0.attention.self.key.weight": 13565952,
+      "bert.encoder.layer.0.attention.self.value.weight": 13565952,
+      "bert.encoder.layer.0.attention.output.dense.weight": 13565952,
+      "bert.encoder.layer.0.intermediate.dense.weight": 19229748
+    },
+    "injection_summary": {
+      "payload_bits_total": 73493568,
+      "written_bits_total": 73493556,
+      "truncated": true,
+      "capacity_used": 0.9999998367204053
+    },
+    "total_injected_bits": 73493556,
+    "metrics": {
+      "bit_accuracy": 0.9999999319668356,
+      "lsb_similarity": 0.9999999319668356,
+      "exact_recovery": false,
+      "hash_match": false,
+      "bit_accuracy_strict": 0.9999999319668356,
+      "exact_recovery_strict": false,
+      "original_bits_count": 73493568,
+      "recovered_bits_count": 73493568,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 0.9999997822938737,
+      "correct_bytes": 9186694,
+      "total_bytes": 9186696,
+      "cosine_similarity": 0.9983316836420002,
+      "weight_norm_ratio": 1.0042875973490433,
+      "l2_distance": 20.75850604258691,
+      "relative_l2_distance": 0.05804586427023327,
+      "wasserstein_distance": 8.343371882801875e-05,
+      "hamming_distance": 5,
+      "logits_kl": 0.004246256131277928,
+      "top1_agreement": 0.994140625,
+      "logits_mse": 0.018766250930639217,
+      "changed_predictions": 3,
+      "prediction_change_rate": 0.005859375,
+      "max_logit_diff": 1.4328045845031738,
+      "mean_logit_diff": 0.06871649785898626,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.919921875,
+      "post_inject_acc": 0.921875,
+      "acc_drop": -0.001953125
+    },
+    "timing": {
+      "baseline_eval_seconds": 1.4704267396591604,
+      "injection_seconds": 8.284904945176095,
+      "post_inject_eval_seconds": 0.955927467904985
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "roberta_sentiment",
+    "task": "sst2",
+    "x": 4,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 72,
+    "target_prefixes": [
+      "roberta.encoder.layer"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 339738624,
+    "capacity_kb": 41472.0,
+    "capacity_used": 1.0,
+    "payload": {
+      "path": "payloads/malware/c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88.js.malware",
+      "sha256": "c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88",
+      "file_type": "malware",
+      "n_bits": 1100128
+    },
+    "inject_report": {
+      "roberta.encoder.layer.0.attention.self.query.weight": 1100128
+    },
+    "injection_summary": {
+      "payload_bits_total": 1100128,
+      "written_bits_total": 1100128,
+      "truncated": false,
+      "capacity_used": 1.0
+    },
+    "total_injected_bits": 1100128,
+    "metrics": {
+      "bit_accuracy": 1.0,
+      "lsb_similarity": 1.0,
+      "exact_recovery": true,
+      "hash_match": true,
+      "bit_accuracy_strict": 1.0,
+      "exact_recovery_strict": true,
+      "original_bits_count": 1100128,
+      "recovered_bits_count": 1100128,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 1.0,
+      "correct_bytes": 137516,
+      "total_bytes": 137516,
+      "cosine_similarity": 0.9999999999999983,
+      "weight_norm_ratio": 0.9999999975121175,
+      "l2_distance": 2.8586381575631095e-05,
+      "relative_l2_distance": 5.837173299484678e-08,
+      "wasserstein_distance": 1.0785322634987438e-10,
+      "hamming_distance": 0,
+      "logits_kl": 2.2357080211785604e-13,
+      "top1_agreement": 1.0,
+      "logits_mse": 1.2317211900219564e-12,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 6.556510925292969e-06,
+      "mean_logit_diff": 6.177015166031197e-07,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.943359375,
+      "post_inject_acc": 0.943359375,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 1.032716650981456,
+      "injection_seconds": 0.17764099081978202,
+      "post_inject_eval_seconds": 0.7075855620205402
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "roberta_sentiment",
+    "task": "sst2",
+    "x": 8,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 72,
+    "target_prefixes": [
+      "roberta.encoder.layer"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 679477248,
+    "capacity_kb": 82944.0,
+    "capacity_used": 1.0,
+    "payload": {
+      "path": "payloads/malware/c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88.js.malware",
+      "sha256": "c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88",
+      "file_type": "malware",
+      "n_bits": 1100128
+    },
+    "inject_report": {
+      "roberta.encoder.layer.0.attention.self.query.weight": 1100128
+    },
+    "injection_summary": {
+      "payload_bits_total": 1100128,
+      "written_bits_total": 1100128,
+      "truncated": false,
+      "capacity_used": 1.0
+    },
+    "total_injected_bits": 1100128,
+    "metrics": {
+      "bit_accuracy": 1.0,
+      "lsb_similarity": 1.0,
+      "exact_recovery": true,
+      "hash_match": true,
+      "bit_accuracy_strict": 1.0,
+      "exact_recovery_strict": true,
+      "original_bits_count": 1100128,
+      "recovered_bits_count": 1100128,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 1.0,
+      "correct_bytes": 137516,
+      "total_bytes": 137516,
+      "cosine_similarity": 0.9999999999998732,
+      "weight_norm_ratio": 0.99999998756059,
+      "l2_distance": 0.0002467275503874201,
+      "relative_l2_distance": 5.038033462046918e-07,
+      "wasserstein_distance": 6.571432842328306e-10,
+      "hamming_distance": 0,
+      "logits_kl": 4.0249116058618174e-13,
+      "top1_agreement": 1.0,
+      "logits_mse": 2.1713293496376535e-12,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 1.0631978511810303e-05,
+      "mean_logit_diff": 7.692779036005959e-07,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.943359375,
+      "post_inject_acc": 0.943359375,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 0.9239268759265542,
+      "injection_seconds": 0.1498184991069138,
+      "post_inject_eval_seconds": 0.617914049886167
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "roberta_sentiment",
+    "task": "sst2",
+    "x": 16,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 72,
+    "target_prefixes": [
+      "roberta.encoder.layer"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 1358954496,
+    "capacity_kb": 165888.0,
+    "capacity_used": 1.0,
+    "payload": {
+      "path": "payloads/malware/c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88.js.malware",
+      "sha256": "c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88",
+      "file_type": "malware",
+      "n_bits": 1100128
+    },
+    "inject_report": {
+      "roberta.encoder.layer.0.attention.self.query.weight": 1100128
+    },
+    "injection_summary": {
+      "payload_bits_total": 1100128,
+      "written_bits_total": 1100128,
+      "truncated": false,
+      "capacity_used": 1.0
+    },
+    "total_injected_bits": 1100128,
+    "metrics": {
+      "bit_accuracy": 1.0,
+      "lsb_similarity": 1.0,
+      "exact_recovery": true,
+      "hash_match": true,
+      "bit_accuracy_strict": 1.0,
+      "exact_recovery_strict": true,
+      "original_bits_count": 1100128,
+      "recovered_bits_count": 1100128,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 1.0,
+      "correct_bytes": 137516,
+      "total_bytes": 137516,
+      "cosine_similarity": 0.9999999962994094,
+      "weight_norm_ratio": 0.9999984973620571,
+      "l2_distance": 0.04213793821348153,
+      "relative_l2_distance": 8.604322557729637e-05,
+      "wasserstein_distance": 5.5396885301206567e-08,
+      "hamming_distance": 0,
+      "logits_kl": 2.4834215848081417e-09,
+      "top1_agreement": 1.0,
+      "logits_mse": 1.3394401907063092e-08,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 0.0008995663374662399,
+      "mean_logit_diff": 5.391670674725901e-05,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.943359375,
+      "post_inject_acc": 0.943359375,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 0.7134785722009838,
+      "injection_seconds": 0.1409702361561358,
+      "post_inject_eval_seconds": 0.4536613328382373
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "roberta_sentiment",
+    "task": "sst2",
+    "x": 19,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 72,
+    "target_prefixes": [
+      "roberta.encoder.layer"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 1613758464,
+    "capacity_kb": 196992.0,
+    "capacity_used": 0.9999918191337736,
+    "payload": {
+      "path": "payloads/malware/c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88.js.malware",
+      "sha256": "c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88",
+      "file_type": "malware",
+      "n_bits": 1100128
+    },
+    "inject_report": {
+      "roberta.encoder.layer.0.attention.self.query.weight": 1100119
+    },
+    "injection_summary": {
+      "payload_bits_total": 1100128,
+      "written_bits_total": 1100119,
+      "truncated": true,
+      "capacity_used": 0.9999918191337736
+    },
+    "total_injected_bits": 1100119,
+    "metrics": {
+      "bit_accuracy": 0.9999954550743186,
+      "lsb_similarity": 0.9999954550743186,
+      "exact_recovery": false,
+      "hash_match": false,
+      "bit_accuracy_strict": 0.9999954550743186,
+      "exact_recovery_strict": false,
+      "original_bits_count": 1100128,
+      "recovered_bits_count": 1100128,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 0.9999854562378196,
+      "correct_bytes": 137514,
+      "total_bytes": 137516,
+      "cosine_similarity": 0.9999997295155396,
+      "weight_norm_ratio": 0.9999975221862514,
+      "l2_distance": 0.36020080390122433,
+      "relative_l2_distance": 0.0007355091477465964,
+      "wasserstein_distance": 9.572747217134747e-08,
+      "hamming_distance": 5,
+      "logits_kl": 9.453443495465195e-08,
+      "top1_agreement": 0.998046875,
+      "logits_mse": 3.9130566892309204e-07,
+      "changed_predictions": 1,
+      "prediction_change_rate": 0.001953125,
+      "max_logit_diff": 0.005420634523034096,
+      "mean_logit_diff": 0.00028742746690113563,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.943359375,
+      "post_inject_acc": 0.9453125,
+      "acc_drop": -0.001953125
+    },
+    "timing": {
+      "baseline_eval_seconds": 0.7464300710707903,
+      "injection_seconds": 0.1382755129598081,
+      "post_inject_eval_seconds": 0.4486925629898906
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "roberta_sentiment",
+    "task": "sst2",
+    "x": 21,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 72,
+    "target_prefixes": [
+      "roberta.encoder.layer"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 1783627776,
+    "capacity_kb": 217728.0,
+    "capacity_used": 0.9999990910148637,
+    "payload": {
+      "path": "payloads/malware/c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88.js.malware",
+      "sha256": "c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88",
+      "file_type": "malware",
+      "n_bits": 1100128
+    },
+    "inject_report": {
+      "roberta.encoder.layer.0.attention.self.query.weight": 1100127
+    },
+    "injection_summary": {
+      "payload_bits_total": 1100128,
+      "written_bits_total": 1100127,
+      "truncated": true,
+      "capacity_used": 0.9999990910148637
+    },
+    "total_injected_bits": 1100127,
+    "metrics": {
+      "bit_accuracy": 1.0,
+      "lsb_similarity": 1.0,
+      "exact_recovery": true,
+      "hash_match": true,
+      "bit_accuracy_strict": 1.0,
+      "exact_recovery_strict": true,
+      "original_bits_count": 1100128,
+      "recovered_bits_count": 1100128,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 1.0,
+      "correct_bytes": 137516,
+      "total_bytes": 137516,
+      "cosine_similarity": 0.9999961278558298,
+      "weight_norm_ratio": 1.0000020476074682,
+      "l2_distance": 1.3628495634130413,
+      "relative_l2_distance": 0.002782859754992734,
+      "wasserstein_distance": 2.500624418644293e-07,
+      "hamming_distance": 0,
+      "logits_kl": 1.0728501719058752e-06,
+      "top1_agreement": 1.0,
+      "logits_mse": 6.361137469212963e-06,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 0.019942283630371094,
+      "mean_logit_diff": 0.0011880070032930234,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.943359375,
+      "post_inject_acc": 0.943359375,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 0.749387773219496,
+      "injection_seconds": 0.13576446007937193,
+      "post_inject_eval_seconds": 0.45257394295185804
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "roberta_sentiment",
+    "task": "sst2",
+    "x": 23,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 72,
+    "target_prefixes": [
+      "roberta.encoder.layer"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 1953497088,
+    "capacity_kb": 238464.0,
+    "capacity_used": 0.9999863652229559,
+    "payload": {
+      "path": "payloads/malware/c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88.js.malware",
+      "sha256": "c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88",
+      "file_type": "malware",
+      "n_bits": 1100128
+    },
+    "inject_report": {
+      "roberta.encoder.layer.0.attention.self.query.weight": 1100113
+    },
+    "injection_summary": {
+      "payload_bits_total": 1100128,
+      "written_bits_total": 1100113,
+      "truncated": true,
+      "capacity_used": 0.9999863652229559
+    },
+    "total_injected_bits": 1100113,
+    "metrics": {
+      "bit_accuracy": 0.9999945460891824,
+      "lsb_similarity": 0.9999945460891824,
+      "exact_recovery": false,
+      "hash_match": false,
+      "bit_accuracy_strict": 0.9999945460891824,
+      "exact_recovery_strict": false,
+      "original_bits_count": 1100128,
+      "recovered_bits_count": 1100128,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 0.9999854562378196,
+      "correct_bytes": 137514,
+      "total_bytes": 137516,
+      "cosine_similarity": 0.9999425322806468,
+      "weight_norm_ratio": 1.0001337677190703,
+      "l2_distance": 5.251053295741882,
+      "relative_l2_distance": 0.010722346237134372,
+      "wasserstein_distance": 2.3829938982089516e-06,
+      "hamming_distance": 6,
+      "logits_kl": 2.3800497080593422e-05,
+      "top1_agreement": 0.998046875,
+      "logits_mse": 0.0001213672180000458,
+      "changed_predictions": 1,
+      "prediction_change_rate": 0.001953125,
+      "max_logit_diff": 0.13309121131896973,
+      "mean_logit_diff": 0.004528938894509338,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.943359375,
+      "post_inject_acc": 0.94140625,
+      "acc_drop": 0.001953125
+    },
+    "timing": {
+      "baseline_eval_seconds": 0.6870483788661659,
+      "injection_seconds": 0.1343085253611207,
+      "post_inject_eval_seconds": 0.4509088690392673
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "roberta_sentiment",
+    "task": "sst2",
+    "x": 4,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 72,
+    "target_prefixes": [
+      "roberta.encoder.layer"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 339738624,
+    "capacity_kb": 41472.0,
+    "capacity_used": 1.0,
+    "payload": {
+      "path": "payloads/malware/5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0.exe.malware",
+      "sha256": "5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0",
+      "file_type": "malware",
+      "n_bits": 73493568
+    },
+    "inject_report": {
+      "roberta.encoder.layer.0.attention.self.query.weight": 2359296,
+      "roberta.encoder.layer.0.attention.self.key.weight": 2359296,
+      "roberta.encoder.layer.0.attention.self.value.weight": 2359296,
+      "roberta.encoder.layer.0.attention.output.dense.weight": 2359296,
+      "roberta.encoder.layer.0.intermediate.dense.weight": 9437184,
+      "roberta.encoder.layer.0.output.dense.weight": 9437184,
+      "roberta.encoder.layer.1.attention.self.query.weight": 2359296,
+      "roberta.encoder.layer.1.attention.self.key.weight": 2359296,
+      "roberta.encoder.layer.1.attention.self.value.weight": 2359296,
+      "roberta.encoder.layer.1.attention.output.dense.weight": 2359296,
+      "roberta.encoder.layer.1.intermediate.dense.weight": 9437184,
+      "roberta.encoder.layer.1.output.dense.weight": 9437184,
+      "roberta.encoder.layer.2.attention.self.query.weight": 2359296,
+      "roberta.encoder.layer.2.attention.self.key.weight": 2359296,
+      "roberta.encoder.layer.2.attention.self.value.weight": 2359296,
+      "roberta.encoder.layer.2.attention.output.dense.weight": 2359296,
+      "roberta.encoder.layer.2.intermediate.dense.weight": 7433280
+    },
+    "injection_summary": {
+      "payload_bits_total": 73493568,
+      "written_bits_total": 73493568,
+      "truncated": false,
+      "capacity_used": 1.0
+    },
+    "total_injected_bits": 73493568,
+    "metrics": {
+      "bit_accuracy": 1.0,
+      "lsb_similarity": 1.0,
+      "exact_recovery": true,
+      "hash_match": true,
+      "bit_accuracy_strict": 1.0,
+      "exact_recovery_strict": true,
+      "original_bits_count": 73493568,
+      "recovered_bits_count": 73493568,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 1.0,
+      "correct_bytes": 9186696,
+      "total_bytes": 9186696,
+      "cosine_similarity": 0.9999999999999549,
+      "weight_norm_ratio": 0.9999999994366083,
+      "l2_distance": 0.00014680164654397104,
+      "relative_l2_distance": 2.9976044686164073e-07,
+      "wasserstein_distance": 2.6899669158808592e-09,
+      "hamming_distance": 0,
+      "logits_kl": 4.775784347479067e-13,
+      "top1_agreement": 1.0,
+      "logits_mse": 2.7691722070781466e-12,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 1.2159347534179688e-05,
+      "mean_logit_diff": 8.829574653645977e-07,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.943359375,
+      "post_inject_acc": 0.943359375,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 0.9394012968987226,
+      "injection_seconds": 10.92304290086031,
+      "post_inject_eval_seconds": 0.46009667171165347
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "roberta_sentiment",
+    "task": "sst2",
+    "x": 8,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 72,
+    "target_prefixes": [
+      "roberta.encoder.layer"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 679477248,
+    "capacity_kb": 82944.0,
+    "capacity_used": 1.0,
+    "payload": {
+      "path": "payloads/malware/5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0.exe.malware",
+      "sha256": "5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0",
+      "file_type": "malware",
+      "n_bits": 73493568
+    },
+    "inject_report": {
+      "roberta.encoder.layer.0.attention.self.query.weight": 4718592,
+      "roberta.encoder.layer.0.attention.self.key.weight": 4718592,
+      "roberta.encoder.layer.0.attention.self.value.weight": 4718592,
+      "roberta.encoder.layer.0.attention.output.dense.weight": 4718592,
+      "roberta.encoder.layer.0.intermediate.dense.weight": 18874368,
+      "roberta.encoder.layer.0.output.dense.weight": 18874368,
+      "roberta.encoder.layer.1.attention.self.query.weight": 4718592,
+      "roberta.encoder.layer.1.attention.self.key.weight": 4718592,
+      "roberta.encoder.layer.1.attention.self.value.weight": 4718592,
+      "roberta.encoder.layer.1.attention.output.dense.weight": 2714688
+    },
+    "injection_summary": {
+      "payload_bits_total": 73493568,
+      "written_bits_total": 73493568,
+      "truncated": false,
+      "capacity_used": 1.0
+    },
+    "total_injected_bits": 73493568,
+    "metrics": {
+      "bit_accuracy": 1.0,
+      "lsb_similarity": 1.0,
+      "exact_recovery": true,
+      "hash_match": true,
+      "bit_accuracy_strict": 1.0,
+      "exact_recovery_strict": true,
+      "original_bits_count": 73493568,
+      "recovered_bits_count": 73493568,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 1.0,
+      "correct_bytes": 9186696,
+      "total_bytes": 9186696,
+      "cosine_similarity": 0.9999999999937055,
+      "weight_norm_ratio": 1.0000000054987273,
+      "l2_distance": 0.0017376048991031036,
+      "relative_l2_distance": 3.548088412401487e-06,
+      "wasserstein_distance": 1.0367874558880885e-08,
+      "hamming_distance": 0,
+      "logits_kl": 1.2221138674052555e-11,
+      "top1_agreement": 1.0,
+      "logits_mse": 7.194028066401931e-11,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 5.1140785217285156e-05,
+      "mean_logit_diff": 4.405583240441047e-06,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.943359375,
+      "post_inject_acc": 0.943359375,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 1.0967611391097307,
+      "injection_seconds": 9.673925117123872,
+      "post_inject_eval_seconds": 0.825677668210119
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "roberta_sentiment",
+    "task": "sst2",
+    "x": 16,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 72,
+    "target_prefixes": [
+      "roberta.encoder.layer"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 1358954496,
+    "capacity_kb": 165888.0,
+    "capacity_used": 1.0,
+    "payload": {
+      "path": "payloads/malware/5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0.exe.malware",
+      "sha256": "5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0",
+      "file_type": "malware",
+      "n_bits": 73493568
+    },
+    "inject_report": {
+      "roberta.encoder.layer.0.attention.self.query.weight": 9437184,
+      "roberta.encoder.layer.0.attention.self.key.weight": 9437184,
+      "roberta.encoder.layer.0.attention.self.value.weight": 9437184,
+      "roberta.encoder.layer.0.attention.output.dense.weight": 9437184,
+      "roberta.encoder.layer.0.intermediate.dense.weight": 35744832
+    },
+    "injection_summary": {
+      "payload_bits_total": 73493568,
+      "written_bits_total": 73493568,
+      "truncated": false,
+      "capacity_used": 1.0
+    },
+    "total_injected_bits": 73493568,
+    "metrics": {
+      "bit_accuracy": 1.0,
+      "lsb_similarity": 1.0,
+      "exact_recovery": true,
+      "hash_match": true,
+      "bit_accuracy_strict": 1.0,
+      "exact_recovery_strict": true,
+      "original_bits_count": 73493568,
+      "recovered_bits_count": 73493568,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 1.0,
+      "correct_bytes": 9186696,
+      "total_bytes": 9186696,
+      "cosine_similarity": 0.9999997488183682,
+      "weight_norm_ratio": 1.0000002858162254,
+      "l2_distance": 0.3471088097462762,
+      "relative_l2_distance": 0.0007087760550968369,
+      "wasserstein_distance": 2.0140070944307809e-07,
+      "hamming_distance": 0,
+      "logits_kl": 9.036180273813949e-07,
+      "top1_agreement": 1.0,
+      "logits_mse": 4.417681084945002e-06,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 0.016223467886447906,
+      "mean_logit_diff": 0.0009452746344322804,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.943359375,
+      "post_inject_acc": 0.943359375,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 1.405689517967403,
+      "injection_seconds": 9.05890451790765,
+      "post_inject_eval_seconds": 0.46065386664122343
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "roberta_sentiment",
+    "task": "sst2",
+    "x": 19,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 72,
+    "target_prefixes": [
+      "roberta.encoder.layer"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 1613758464,
+    "capacity_kb": 196992.0,
+    "capacity_used": 0.999999863933671,
+    "payload": {
+      "path": "payloads/malware/5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0.exe.malware",
+      "sha256": "5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0",
+      "file_type": "malware",
+      "n_bits": 73493568
+    },
+    "inject_report": {
+      "roberta.encoder.layer.0.attention.self.query.weight": 11206656,
+      "roberta.encoder.layer.0.attention.self.key.weight": 11206656,
+      "roberta.encoder.layer.0.attention.self.value.weight": 11206656,
+      "roberta.encoder.layer.0.attention.output.dense.weight": 11206656,
+      "roberta.encoder.layer.0.intermediate.dense.weight": 28666934
+    },
+    "injection_summary": {
+      "payload_bits_total": 73493568,
+      "written_bits_total": 73493558,
+      "truncated": true,
+      "capacity_used": 0.999999863933671
+    },
+    "total_injected_bits": 73493558,
+    "metrics": {
+      "bit_accuracy": 0.9999999455734684,
+      "lsb_similarity": 0.9999999455734684,
+      "exact_recovery": false,
+      "hash_match": false,
+      "bit_accuracy_strict": 0.9999999455734684,
+      "exact_recovery_strict": false,
+      "original_bits_count": 73493568,
+      "recovered_bits_count": 73493568,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 0.9999998911469369,
+      "correct_bytes": 9186695,
+      "total_bytes": 9186696,
+      "cosine_similarity": 0.9999856377296616,
+      "weight_norm_ratio": 1.00003582568935,
+      "l2_distance": 2.6248266696470717,
+      "relative_l2_distance": 0.005359743803637004,
+      "wasserstein_distance": 1.200025508296676e-06,
+      "hamming_distance": 4,
+      "logits_kl": 2.823995803686646e-05,
+      "top1_agreement": 1.0,
+      "logits_mse": 0.00014608204935484537,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 0.09086768329143524,
+      "mean_logit_diff": 0.005874626382137649,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.943359375,
+      "post_inject_acc": 0.943359375,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 1.0623669400811195,
+      "injection_seconds": 8.586900683119893,
+      "post_inject_eval_seconds": 0.8748754011467099
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "roberta_sentiment",
+    "task": "sst2",
+    "x": 21,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 72,
+    "target_prefixes": [
+      "roberta.encoder.layer"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 1783627776,
+    "capacity_kb": 217728.0,
+    "capacity_used": 0.9999997959005066,
+    "payload": {
+      "path": "payloads/malware/5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0.exe.malware",
+      "sha256": "5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0",
+      "file_type": "malware",
+      "n_bits": 73493568
+    },
+    "inject_report": {
+      "roberta.encoder.layer.0.attention.self.query.weight": 12386304,
+      "roberta.encoder.layer.0.attention.self.key.weight": 12386304,
+      "roberta.encoder.layer.0.attention.self.value.weight": 12386304,
+      "roberta.encoder.layer.0.attention.output.dense.weight": 12386304,
+      "roberta.encoder.layer.0.intermediate.dense.weight": 23948337
+    },
+    "injection_summary": {
+      "payload_bits_total": 73493568,
+      "written_bits_total": 73493553,
+      "truncated": true,
+      "capacity_used": 0.9999997959005066
+    },
+    "total_injected_bits": 73493553,
+    "metrics": {
+      "bit_accuracy": 0.9999999183602026,
+      "lsb_similarity": 0.9999999183602026,
+      "exact_recovery": false,
+      "hash_match": false,
+      "bit_accuracy_strict": 0.9999999183602026,
+      "exact_recovery_strict": false,
+      "original_bits_count": 73493568,
+      "recovered_bits_count": 73493568,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 0.9999997822938737,
+      "correct_bytes": 9186694,
+      "total_bytes": 9186696,
+      "cosine_similarity": 0.9997817730094346,
+      "weight_norm_ratio": 1.000710194383743,
+      "l2_distance": 10.240723017112025,
+      "relative_l2_distance": 0.02091096237722588,
+      "wasserstein_distance": 1.3137017958797514e-05,
+      "hamming_distance": 6,
+      "logits_kl": 0.0004693024843738544,
+      "top1_agreement": 0.9921875,
+      "logits_mse": 0.00204755514118915,
+      "changed_predictions": 4,
+      "prediction_change_rate": 0.0078125,
+      "max_logit_diff": 0.37187135219573975,
+      "mean_logit_diff": 0.02192450306029059,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.943359375,
+      "post_inject_acc": 0.943359375,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 1.0339525020681322,
+      "injection_seconds": 8.60340629098937,
+      "post_inject_eval_seconds": 0.8672076463699341
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "roberta_sentiment",
+    "task": "sst2",
+    "x": 23,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 72,
+    "target_prefixes": [
+      "roberta.encoder.layer"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 1953497088,
+    "capacity_kb": 238464.0,
+    "capacity_used": 0.9999998367204053,
+    "payload": {
+      "path": "payloads/malware/5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0.exe.malware",
+      "sha256": "5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0",
+      "file_type": "malware",
+      "n_bits": 73493568
+    },
+    "inject_report": {
+      "roberta.encoder.layer.0.attention.self.query.weight": 13565952,
+      "roberta.encoder.layer.0.attention.self.key.weight": 13565952,
+      "roberta.encoder.layer.0.attention.self.value.weight": 13565952,
+      "roberta.encoder.layer.0.attention.output.dense.weight": 13565952,
+      "roberta.encoder.layer.0.intermediate.dense.weight": 19229748
+    },
+    "injection_summary": {
+      "payload_bits_total": 73493568,
+      "written_bits_total": 73493556,
+      "truncated": true,
+      "capacity_used": 0.9999998367204053
+    },
+    "total_injected_bits": 73493556,
+    "metrics": {
+      "bit_accuracy": 0.9999999319668356,
+      "lsb_similarity": 0.9999999319668356,
+      "exact_recovery": false,
+      "hash_match": false,
+      "bit_accuracy_strict": 0.9999999319668356,
+      "exact_recovery_strict": false,
+      "original_bits_count": 73493568,
+      "recovered_bits_count": 73493568,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 0.9999997822938737,
+      "correct_bytes": 9186694,
+      "total_bytes": 9186696,
+      "cosine_similarity": 0.9964855650898677,
+      "weight_norm_ratio": 1.0097788108859662,
+      "l2_distance": 41.53541340851926,
+      "relative_l2_distance": 0.08481290487563711,
+      "wasserstein_distance": 0.0001671249483479187,
+      "hamming_distance": 5,
+      "logits_kl": 0.00961908170911115,
+      "top1_agreement": 0.998046875,
+      "logits_mse": 0.05748877128644381,
+      "changed_predictions": 1,
+      "prediction_change_rate": 0.001953125,
+      "max_logit_diff": 1.9623043537139893,
+      "mean_logit_diff": 0.12459994514938444,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.943359375,
+      "post_inject_acc": 0.94140625,
+      "acc_drop": 0.001953125
+    },
+    "timing": {
+      "baseline_eval_seconds": 1.420493584126234,
+      "injection_seconds": 8.526493563782424,
+      "post_inject_eval_seconds": 0.7117459382861853
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "vit_cifar10",
+    "task": "cifar10",
+    "x": 4,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 72,
+    "target_prefixes": [
+      "vit.encoder.layer"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 339738624,
+    "capacity_kb": 41472.0,
+    "capacity_used": 1.0,
+    "payload": {
+      "path": "payloads/malware/c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88.js.malware",
+      "sha256": "c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88",
+      "file_type": "malware",
+      "n_bits": 1100128
+    },
+    "inject_report": {
+      "vit.encoder.layer.0.attention.attention.query.weight": 1100128
+    },
+    "injection_summary": {
+      "payload_bits_total": 1100128,
+      "written_bits_total": 1100128,
+      "truncated": false,
+      "capacity_used": 1.0
+    },
+    "total_injected_bits": 1100128,
+    "metrics": {
+      "bit_accuracy": 1.0,
+      "lsb_similarity": 1.0,
+      "exact_recovery": true,
+      "hash_match": true,
+      "bit_accuracy_strict": 1.0,
+      "exact_recovery_strict": true,
+      "original_bits_count": 1100128,
+      "recovered_bits_count": 1100128,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 1.0,
+      "correct_bytes": 137516,
+      "total_bytes": 137516,
+      "cosine_similarity": 0.9999999999999982,
+      "weight_norm_ratio": 0.9999999987072499,
+      "l2_distance": 4.6309443161878254e-05,
+      "relative_l2_distance": 6.07955781706477e-08,
+      "wasserstein_distance": 1.484321277001044e-10,
+      "hamming_distance": 0,
+      "logits_kl": 2.8333669172685798e-14,
+      "top1_agreement": 1.0,
+      "logits_mse": 4.150604706581188e-14,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 4.0531158447265625e-06,
+      "mean_logit_diff": 1.1924857972189785e-07,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.98046875,
+      "post_inject_acc": 0.98046875,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 2.152391971088946,
+      "injection_seconds": 0.1764092012308538,
+      "post_inject_eval_seconds": 1.3890002719126642
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "vit_cifar10",
+    "task": "cifar10",
+    "x": 8,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 72,
+    "target_prefixes": [
+      "vit.encoder.layer"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 679477248,
+    "capacity_kb": 82944.0,
+    "capacity_used": 1.0,
+    "payload": {
+      "path": "payloads/malware/c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88.js.malware",
+      "sha256": "c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88",
+      "file_type": "malware",
+      "n_bits": 1100128
+    },
+    "inject_report": {
+      "vit.encoder.layer.0.attention.attention.query.weight": 1100128
+    },
+    "injection_summary": {
+      "payload_bits_total": 1100128,
+      "written_bits_total": 1100128,
+      "truncated": false,
+      "capacity_used": 1.0
+    },
+    "total_injected_bits": 1100128,
+    "metrics": {
+      "bit_accuracy": 1.0,
+      "lsb_similarity": 1.0,
+      "exact_recovery": true,
+      "hash_match": true,
+      "bit_accuracy_strict": 1.0,
+      "exact_recovery_strict": true,
+      "original_bits_count": 1100128,
+      "recovered_bits_count": 1100128,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 1.0,
+      "correct_bytes": 137516,
+      "total_bytes": 137516,
+      "cosine_similarity": 0.9999999999999023,
+      "weight_norm_ratio": 0.9999999909507505,
+      "l2_distance": 0.00033657958123894027,
+      "relative_l2_distance": 4.418656076327117e-07,
+      "wasserstein_distance": 8.536736872954975e-10,
+      "hamming_distance": 0,
+      "logits_kl": 4.8092887376441866e-14,
+      "top1_agreement": 1.0,
+      "logits_mse": 7.683146004575252e-14,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 4.0531158447265625e-06,
+      "mean_logit_diff": 1.5975037968019023e-07,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.98046875,
+      "post_inject_acc": 0.98046875,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 1.599573902785778,
+      "injection_seconds": 0.13963758712634444,
+      "post_inject_eval_seconds": 1.3819862511008978
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "vit_cifar10",
+    "task": "cifar10",
+    "x": 16,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 72,
+    "target_prefixes": [
+      "vit.encoder.layer"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 1358954496,
+    "capacity_kb": 165888.0,
+    "capacity_used": 1.0,
+    "payload": {
+      "path": "payloads/malware/c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88.js.malware",
+      "sha256": "c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88",
+      "file_type": "malware",
+      "n_bits": 1100128
+    },
+    "inject_report": {
+      "vit.encoder.layer.0.attention.attention.query.weight": 1100128
+    },
+    "injection_summary": {
+      "payload_bits_total": 1100128,
+      "written_bits_total": 1100128,
+      "truncated": false,
+      "capacity_used": 1.0
+    },
+    "total_injected_bits": 1100128,
+    "metrics": {
+      "bit_accuracy": 1.0,
+      "lsb_similarity": 1.0,
+      "exact_recovery": true,
+      "hash_match": true,
+      "bit_accuracy_strict": 1.0,
+      "exact_recovery_strict": true,
+      "original_bits_count": 1100128,
+      "recovered_bits_count": 1100128,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 1.0,
+      "correct_bytes": 137516,
+      "total_bytes": 137516,
+      "cosine_similarity": 0.9999999960252345,
+      "weight_norm_ratio": 0.9999983440678559,
+      "l2_distance": 0.06792708015702693,
+      "relative_l2_distance": 8.917546464885822e-05,
+      "wasserstein_distance": 8.560921571643121e-08,
+      "hamming_distance": 0,
+      "logits_kl": 9.297491929331305e-10,
+      "top1_agreement": 1.0,
+      "logits_mse": 1.3023572628320657e-09,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 0.0005650520324707031,
+      "mean_logit_diff": 1.7985447175306036e-05,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.98046875,
+      "post_inject_acc": 0.98046875,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 1.5903798379004002,
+      "injection_seconds": 0.13983801333233714,
+      "post_inject_eval_seconds": 1.3673536395654082
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "vit_cifar10",
+    "task": "cifar10",
+    "x": 19,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 72,
+    "target_prefixes": [
+      "vit.encoder.layer"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 1613758464,
+    "capacity_kb": 196992.0,
+    "capacity_used": 0.9999918191337736,
+    "payload": {
+      "path": "payloads/malware/c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88.js.malware",
+      "sha256": "c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88",
+      "file_type": "malware",
+      "n_bits": 1100128
+    },
+    "inject_report": {
+      "vit.encoder.layer.0.attention.attention.query.weight": 1100119
+    },
+    "injection_summary": {
+      "payload_bits_total": 1100128,
+      "written_bits_total": 1100119,
+      "truncated": true,
+      "capacity_used": 0.9999918191337736
+    },
+    "total_injected_bits": 1100119,
+    "metrics": {
+      "bit_accuracy": 0.9999981820297275,
+      "lsb_similarity": 0.9999981820297275,
+      "exact_recovery": false,
+      "hash_match": false,
+      "bit_accuracy_strict": 0.9999981820297275,
+      "exact_recovery_strict": false,
+      "original_bits_count": 1100128,
+      "recovered_bits_count": 1100128,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 0.9999927281189098,
+      "correct_bytes": 137515,
+      "total_bytes": 137516,
+      "cosine_similarity": 0.999999687005974,
+      "weight_norm_ratio": 0.999996530613627,
+      "l2_distance": 0.6026761534304276,
+      "relative_l2_distance": 0.000791200297299769,
+      "wasserstein_distance": 1.5826923061013076e-07,
+      "hamming_distance": 2,
+      "logits_kl": 2.4856721615905895e-08,
+      "top1_agreement": 1.0,
+      "logits_mse": 3.314095189943522e-08,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 0.0036841630935668945,
+      "mean_logit_diff": 8.158995260600931e-05,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.98046875,
+      "post_inject_acc": 0.98046875,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 1.6012270329520106,
+      "injection_seconds": 0.13604991231113672,
+      "post_inject_eval_seconds": 1.3532954496331513
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "vit_cifar10",
+    "task": "cifar10",
+    "x": 21,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 72,
+    "target_prefixes": [
+      "vit.encoder.layer"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 1783627776,
+    "capacity_kb": 217728.0,
+    "capacity_used": 0.9999990910148637,
+    "payload": {
+      "path": "payloads/malware/c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88.js.malware",
+      "sha256": "c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88",
+      "file_type": "malware",
+      "n_bits": 1100128
+    },
+    "inject_report": {
+      "vit.encoder.layer.0.attention.attention.query.weight": 1100127
+    },
+    "injection_summary": {
+      "payload_bits_total": 1100128,
+      "written_bits_total": 1100127,
+      "truncated": true,
+      "capacity_used": 0.9999990910148637
+    },
+    "total_injected_bits": 1100127,
+    "metrics": {
+      "bit_accuracy": 0.9999990910148637,
+      "lsb_similarity": 0.9999990910148637,
+      "exact_recovery": false,
+      "hash_match": false,
+      "bit_accuracy_strict": 0.9999990910148637,
+      "exact_recovery_strict": false,
+      "original_bits_count": 1100128,
+      "recovered_bits_count": 1100128,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 0.9999927281189098,
+      "correct_bytes": 137515,
+      "total_bytes": 137516,
+      "cosine_similarity": 0.9999955355860931,
+      "weight_norm_ratio": 0.9999997181827873,
+      "l2_distance": 2.2761176916442216,
+      "relative_l2_distance": 0.0029881139050676945,
+      "wasserstein_distance": 3.74844915995709e-07,
+      "hamming_distance": 1,
+      "logits_kl": 2.85752533291943e-07,
+      "top1_agreement": 1.0,
+      "logits_mse": 4.208602804034456e-07,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 0.012308597564697266,
+      "mean_logit_diff": 0.00029468881948560013,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.98046875,
+      "post_inject_acc": 0.98046875,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 1.5843978798948228,
+      "injection_seconds": 0.1268933559767902,
+      "post_inject_eval_seconds": 1.338935490231961
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "vit_cifar10",
+    "task": "cifar10",
+    "x": 23,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 72,
+    "target_prefixes": [
+      "vit.encoder.layer"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 1953497088,
+    "capacity_kb": 238464.0,
+    "capacity_used": 0.9999863652229559,
+    "payload": {
+      "path": "payloads/malware/c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88.js.malware",
+      "sha256": "c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88",
+      "file_type": "malware",
+      "n_bits": 1100128
+    },
+    "inject_report": {
+      "vit.encoder.layer.0.attention.attention.query.weight": 1100113
+    },
+    "injection_summary": {
+      "payload_bits_total": 1100128,
+      "written_bits_total": 1100113,
+      "truncated": true,
+      "capacity_used": 0.9999863652229559
+    },
+    "total_injected_bits": 1100113,
+    "metrics": {
+      "bit_accuracy": 0.9999936371040461,
+      "lsb_similarity": 0.9999936371040461,
+      "exact_recovery": false,
+      "hash_match": false,
+      "bit_accuracy_strict": 0.9999936371040461,
+      "exact_recovery_strict": false,
+      "original_bits_count": 1100128,
+      "recovered_bits_count": 1100128,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 0.9999854562378196,
+      "correct_bytes": 137514,
+      "total_bytes": 137516,
+      "cosine_similarity": 0.9999298804277041,
+      "weight_norm_ratio": 1.000147087336531,
+      "l2_distance": 9.02189177778142,
+      "relative_l2_distance": 0.011844044958734243,
+      "wasserstein_distance": 3.326928890601266e-06,
+      "hamming_distance": 7,
+      "logits_kl": 5.6923155477143676e-06,
+      "top1_agreement": 1.0,
+      "logits_mse": 7.614639255137945e-06,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 0.05515730381011963,
+      "mean_logit_diff": 0.0013045996136497706,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.98046875,
+      "post_inject_acc": 0.98046875,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 1.6529467953369021,
+      "injection_seconds": 0.1350425397977233,
+      "post_inject_eval_seconds": 1.382403225172311
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "vit_cifar10",
+    "task": "cifar10",
+    "x": 4,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 72,
+    "target_prefixes": [
+      "vit.encoder.layer"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 339738624,
+    "capacity_kb": 41472.0,
+    "capacity_used": 1.0,
+    "payload": {
+      "path": "payloads/malware/5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0.exe.malware",
+      "sha256": "5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0",
+      "file_type": "malware",
+      "n_bits": 73493568
+    },
+    "inject_report": {
+      "vit.encoder.layer.0.attention.attention.query.weight": 2359296,
+      "vit.encoder.layer.0.attention.attention.key.weight": 2359296,
+      "vit.encoder.layer.0.attention.attention.value.weight": 2359296,
+      "vit.encoder.layer.0.attention.output.dense.weight": 2359296,
+      "vit.encoder.layer.0.intermediate.dense.weight": 9437184,
+      "vit.encoder.layer.0.output.dense.weight": 9437184,
+      "vit.encoder.layer.1.attention.attention.query.weight": 2359296,
+      "vit.encoder.layer.1.attention.attention.key.weight": 2359296,
+      "vit.encoder.layer.1.attention.attention.value.weight": 2359296,
+      "vit.encoder.layer.1.attention.output.dense.weight": 2359296,
+      "vit.encoder.layer.1.intermediate.dense.weight": 9437184,
+      "vit.encoder.layer.1.output.dense.weight": 9437184,
+      "vit.encoder.layer.2.attention.attention.query.weight": 2359296,
+      "vit.encoder.layer.2.attention.attention.key.weight": 2359296,
+      "vit.encoder.layer.2.attention.attention.value.weight": 2359296,
+      "vit.encoder.layer.2.attention.output.dense.weight": 2359296,
+      "vit.encoder.layer.2.intermediate.dense.weight": 7433280
+    },
+    "injection_summary": {
+      "payload_bits_total": 73493568,
+      "written_bits_total": 73493568,
+      "truncated": false,
+      "capacity_used": 1.0
+    },
+    "total_injected_bits": 73493568,
+    "metrics": {
+      "bit_accuracy": 1.0,
+      "lsb_similarity": 1.0,
+      "exact_recovery": true,
+      "hash_match": true,
+      "bit_accuracy_strict": 1.0,
+      "exact_recovery_strict": true,
+      "original_bits_count": 73493568,
+      "recovered_bits_count": 73493568,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 1.0,
+      "correct_bytes": 9186696,
+      "total_bytes": 9186696,
+      "cosine_similarity": 0.9999999999999697,
+      "weight_norm_ratio": 0.9999999982541492,
+      "l2_distance": 0.00018710499710491025,
+      "relative_l2_distance": 2.4563362677127515e-07,
+      "wasserstein_distance": 3.4134670645613596e-09,
+      "hamming_distance": 0,
+      "logits_kl": 4.3170268121765776e-14,
+      "top1_agreement": 1.0,
+      "logits_mse": 6.360691225249226e-14,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 5.9604644775390625e-06,
+      "mean_logit_diff": 1.4367979019880295e-07,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.98046875,
+      "post_inject_acc": 0.98046875,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 2.3693802426569164,
+      "injection_seconds": 11.431776255369186,
+      "post_inject_eval_seconds": 1.3156454390846193
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "vit_cifar10",
+    "task": "cifar10",
+    "x": 8,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 72,
+    "target_prefixes": [
+      "vit.encoder.layer"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 679477248,
+    "capacity_kb": 82944.0,
+    "capacity_used": 1.0,
+    "payload": {
+      "path": "payloads/malware/5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0.exe.malware",
+      "sha256": "5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0",
+      "file_type": "malware",
+      "n_bits": 73493568
+    },
+    "inject_report": {
+      "vit.encoder.layer.0.attention.attention.query.weight": 4718592,
+      "vit.encoder.layer.0.attention.attention.key.weight": 4718592,
+      "vit.encoder.layer.0.attention.attention.value.weight": 4718592,
+      "vit.encoder.layer.0.attention.output.dense.weight": 4718592,
+      "vit.encoder.layer.0.intermediate.dense.weight": 18874368,
+      "vit.encoder.layer.0.output.dense.weight": 18874368,
+      "vit.encoder.layer.1.attention.attention.query.weight": 4718592,
+      "vit.encoder.layer.1.attention.attention.key.weight": 4718592,
+      "vit.encoder.layer.1.attention.attention.value.weight": 4718592,
+      "vit.encoder.layer.1.attention.output.dense.weight": 2714688
+    },
+    "injection_summary": {
+      "payload_bits_total": 73493568,
+      "written_bits_total": 73493568,
+      "truncated": false,
+      "capacity_used": 1.0
+    },
+    "total_injected_bits": 73493568,
+    "metrics": {
+      "bit_accuracy": 1.0,
+      "lsb_similarity": 1.0,
+      "exact_recovery": true,
+      "hash_match": true,
+      "bit_accuracy_strict": 1.0,
+      "exact_recovery_strict": true,
+      "original_bits_count": 73493568,
+      "recovered_bits_count": 73493568,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 1.0,
+      "correct_bytes": 9186696,
+      "total_bytes": 9186696,
+      "cosine_similarity": 0.999999999995731,
+      "weight_norm_ratio": 1.00000000573581,
+      "l2_distance": 0.0022257680068002656,
+      "relative_l2_distance": 2.9220142504011916e-06,
+      "wasserstein_distance": 1.3520975450376227e-08,
+      "hamming_distance": 0,
+      "logits_kl": 1.9279446797442207e-12,
+      "top1_agreement": 1.0,
+      "logits_mse": 2.4374487329084605e-12,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 2.5272369384765625e-05,
+      "mean_logit_diff": 7.032164830889087e-07,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.98046875,
+      "post_inject_acc": 0.98046875,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 1.9477973110042512,
+      "injection_seconds": 9.826277501881123,
+      "post_inject_eval_seconds": 1.6851956769824028
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "vit_cifar10",
+    "task": "cifar10",
+    "x": 16,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 72,
+    "target_prefixes": [
+      "vit.encoder.layer"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 1358954496,
+    "capacity_kb": 165888.0,
+    "capacity_used": 1.0,
+    "payload": {
+      "path": "payloads/malware/5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0.exe.malware",
+      "sha256": "5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0",
+      "file_type": "malware",
+      "n_bits": 73493568
+    },
+    "inject_report": {
+      "vit.encoder.layer.0.attention.attention.query.weight": 9437184,
+      "vit.encoder.layer.0.attention.attention.key.weight": 9437184,
+      "vit.encoder.layer.0.attention.attention.value.weight": 9437184,
+      "vit.encoder.layer.0.attention.output.dense.weight": 9437184,
+      "vit.encoder.layer.0.intermediate.dense.weight": 35744832
+    },
+    "injection_summary": {
+      "payload_bits_total": 73493568,
+      "written_bits_total": 73493568,
+      "truncated": false,
+      "capacity_used": 1.0
+    },
+    "total_injected_bits": 73493568,
+    "metrics": {
+      "bit_accuracy": 1.0,
+      "lsb_similarity": 1.0,
+      "exact_recovery": true,
+      "hash_match": true,
+      "bit_accuracy_strict": 1.0,
+      "exact_recovery_strict": true,
+      "original_bits_count": 73493568,
+      "recovered_bits_count": 73493568,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 1.0,
+      "correct_bytes": 9186696,
+      "total_bytes": 9186696,
+      "cosine_similarity": 0.9999998265415565,
+      "weight_norm_ratio": 0.9999998811504053,
+      "l2_distance": 0.4486526872220816,
+      "relative_l2_distance": 0.0005889964908914041,
+      "wasserstein_distance": 2.7489178933137737e-07,
+      "hamming_distance": 0,
+      "logits_kl": 5.026255130611403e-08,
+      "top1_agreement": 1.0,
+      "logits_mse": 7.438741911336422e-08,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 0.0048902034759521484,
+      "mean_logit_diff": 0.00012756099640682806,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.98046875,
+      "post_inject_acc": 0.98046875,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 2.503352421335876,
+      "injection_seconds": 8.758208646904677,
+      "post_inject_eval_seconds": 1.3599033490754664
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "vit_cifar10",
+    "task": "cifar10",
+    "x": 19,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 72,
+    "target_prefixes": [
+      "vit.encoder.layer"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 1613758464,
+    "capacity_kb": 196992.0,
+    "capacity_used": 0.999999863933671,
+    "payload": {
+      "path": "payloads/malware/5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0.exe.malware",
+      "sha256": "5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0",
+      "file_type": "malware",
+      "n_bits": 73493568
+    },
+    "inject_report": {
+      "vit.encoder.layer.0.attention.attention.query.weight": 11206656,
+      "vit.encoder.layer.0.attention.attention.key.weight": 11206656,
+      "vit.encoder.layer.0.attention.attention.value.weight": 11206656,
+      "vit.encoder.layer.0.attention.output.dense.weight": 11206656,
+      "vit.encoder.layer.0.intermediate.dense.weight": 28666934
+    },
+    "injection_summary": {
+      "payload_bits_total": 73493568,
+      "written_bits_total": 73493558,
+      "truncated": true,
+      "capacity_used": 0.999999863933671
+    },
+    "total_injected_bits": 73493558,
+    "metrics": {
+      "bit_accuracy": 0.9999999727867342,
+      "lsb_similarity": 0.9999999727867342,
+      "exact_recovery": false,
+      "hash_match": false,
+      "bit_accuracy_strict": 0.9999999727867342,
+      "exact_recovery_strict": false,
+      "original_bits_count": 73493568,
+      "recovered_bits_count": 73493568,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 0.9999998911469369,
+      "correct_bytes": 9186695,
+      "total_bytes": 9186696,
+      "cosine_similarity": 0.9999902668975658,
+      "weight_norm_ratio": 1.0000093241383419,
+      "l2_distance": 3.3607886422860025,
+      "relative_l2_distance": 0.004412082604899899,
+      "wasserstein_distance": 1.2200479204693693e-06,
+      "hamming_distance": 2,
+      "logits_kl": 3.5203628656947437e-06,
+      "top1_agreement": 1.0,
+      "logits_mse": 4.169038785306611e-06,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 0.05484604835510254,
+      "mean_logit_diff": 0.0009116740635363385,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.98046875,
+      "post_inject_acc": 0.98046875,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 2.2637643297202885,
+      "injection_seconds": 9.189829597249627,
+      "post_inject_eval_seconds": 1.5500143598765135
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "vit_cifar10",
+    "task": "cifar10",
+    "x": 21,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 72,
+    "target_prefixes": [
+      "vit.encoder.layer"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 1783627776,
+    "capacity_kb": 217728.0,
+    "capacity_used": 0.9999997959005066,
+    "payload": {
+      "path": "payloads/malware/5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0.exe.malware",
+      "sha256": "5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0",
+      "file_type": "malware",
+      "n_bits": 73493568
+    },
+    "inject_report": {
+      "vit.encoder.layer.0.attention.attention.query.weight": 12386304,
+      "vit.encoder.layer.0.attention.attention.key.weight": 12386304,
+      "vit.encoder.layer.0.attention.attention.value.weight": 12386304,
+      "vit.encoder.layer.0.attention.output.dense.weight": 12386304,
+      "vit.encoder.layer.0.intermediate.dense.weight": 23948337
+    },
+    "injection_summary": {
+      "payload_bits_total": 73493568,
+      "written_bits_total": 73493553,
+      "truncated": true,
+      "capacity_used": 0.9999997959005066
+    },
+    "total_injected_bits": 73493553,
+    "metrics": {
+      "bit_accuracy": 0.999999863933671,
+      "lsb_similarity": 0.999999863933671,
+      "exact_recovery": false,
+      "hash_match": false,
+      "bit_accuracy_strict": 0.999999863933671,
+      "exact_recovery_strict": false,
+      "original_bits_count": 73493568,
+      "recovered_bits_count": 73493568,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 0.9999997822938737,
+      "correct_bytes": 9186694,
+      "total_bytes": 9186696,
+      "cosine_similarity": 0.9998554881165715,
+      "weight_norm_ratio": 1.0003781609993676,
+      "l2_distance": 12.95548954676597,
+      "relative_l2_distance": 0.017008118079204174,
+      "wasserstein_distance": 1.1908521628356539e-05,
+      "hamming_distance": 10,
+      "logits_kl": 2.688314767495957e-05,
+      "top1_agreement": 1.0,
+      "logits_mse": 4.260119865762135e-05,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 0.11162054538726807,
+      "mean_logit_diff": 0.0034054525196552275,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.98046875,
+      "post_inject_acc": 0.98046875,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 2.0684409299865365,
+      "injection_seconds": 8.530788749922067,
+      "post_inject_eval_seconds": 1.384035584051162
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "vit_cifar10",
+    "task": "cifar10",
+    "x": 23,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 72,
+    "target_prefixes": [
+      "vit.encoder.layer"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 1953497088,
+    "capacity_kb": 238464.0,
+    "capacity_used": 0.9999998367204053,
+    "payload": {
+      "path": "payloads/malware/5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0.exe.malware",
+      "sha256": "5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0",
+      "file_type": "malware",
+      "n_bits": 73493568
+    },
+    "inject_report": {
+      "vit.encoder.layer.0.attention.attention.query.weight": 13565952,
+      "vit.encoder.layer.0.attention.attention.key.weight": 13565952,
+      "vit.encoder.layer.0.attention.attention.value.weight": 13565952,
+      "vit.encoder.layer.0.attention.output.dense.weight": 13565952,
+      "vit.encoder.layer.0.intermediate.dense.weight": 19229748
+    },
+    "injection_summary": {
+      "payload_bits_total": 73493568,
+      "written_bits_total": 73493556,
+      "truncated": true,
+      "capacity_used": 0.9999998367204053
+    },
+    "total_injected_bits": 73493556,
+    "metrics": {
+      "bit_accuracy": 0.999999877540304,
+      "lsb_similarity": 0.999999877540304,
+      "exact_recovery": false,
+      "hash_match": false,
+      "bit_accuracy_strict": 0.999999877540304,
+      "exact_recovery_strict": false,
+      "original_bits_count": 73493568,
+      "recovered_bits_count": 73493568,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 0.9999997822938737,
+      "correct_bytes": 9186694,
+      "total_bytes": 9186696,
+      "cosine_similarity": 0.9976861680742015,
+      "weight_norm_ratio": 1.0060048734303073,
+      "l2_distance": 52.173974903457015,
+      "relative_l2_distance": 0.0684946039758834,
+      "wasserstein_distance": 0.00017304463835898787,
+      "hamming_distance": 9,
+      "logits_kl": 0.0015157944365682303,
+      "top1_agreement": 0.99609375,
+      "logits_mse": 0.00220758675095567,
+      "changed_predictions": 2,
+      "prediction_change_rate": 0.00390625,
+      "max_logit_diff": 0.741233229637146,
+      "mean_logit_diff": 0.026007381500676274,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.98046875,
+      "post_inject_acc": 0.9765625,
+      "acc_drop": 0.00390625
+    },
+    "timing": {
+      "baseline_eval_seconds": 2.3366598673164845,
+      "injection_seconds": 8.761005739681423,
+      "post_inject_eval_seconds": 1.6778181991539896
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "swin_cifar10",
+    "task": "cifar10",
+    "x": 4,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 144,
+    "target_prefixes": [
+      "swin.encoder.layers"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 335020032,
+    "capacity_kb": 40896.0,
+    "capacity_used": 1.0,
+    "payload": {
+      "path": "payloads/malware/c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88.js.malware",
+      "sha256": "c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88",
+      "file_type": "malware",
+      "n_bits": 1100128
+    },
+    "inject_report": {
+      "swin.encoder.layers.0.blocks.0.attention.self.query.weight": 65536,
+      "swin.encoder.layers.0.blocks.0.attention.self.key.weight": 65536,
+      "swin.encoder.layers.0.blocks.0.attention.self.value.weight": 65536,
+      "swin.encoder.layers.0.blocks.0.attention.output.dense.weight": 65536,
+      "swin.encoder.layers.0.blocks.0.intermediate.dense.weight": 262144,
+      "swin.encoder.layers.0.blocks.0.output.dense.weight": 262144,
+      "swin.encoder.layers.0.blocks.1.attention.self.query.weight": 65536,
+      "swin.encoder.layers.0.blocks.1.attention.self.key.weight": 65536,
+      "swin.encoder.layers.0.blocks.1.attention.self.value.weight": 65536,
+      "swin.encoder.layers.0.blocks.1.attention.output.dense.weight": 65536,
+      "swin.encoder.layers.0.blocks.1.intermediate.dense.weight": 51552
+    },
+    "injection_summary": {
+      "payload_bits_total": 1100128,
+      "written_bits_total": 1100128,
+      "truncated": false,
+      "capacity_used": 1.0
+    },
+    "total_injected_bits": 1100128,
+    "metrics": {
+      "bit_accuracy": 1.0,
+      "lsb_similarity": 1.0,
+      "exact_recovery": true,
+      "hash_match": true,
+      "bit_accuracy_strict": 1.0,
+      "exact_recovery_strict": true,
+      "original_bits_count": 1100128,
+      "recovered_bits_count": 1100128,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 1.0,
+      "correct_bytes": 137516,
+      "total_bytes": 137516,
+      "cosine_similarity": 0.9999999999999994,
+      "weight_norm_ratio": 0.9999999993244963,
+      "l2_distance": 1.5796143958038794e-05,
+      "relative_l2_distance": 3.3464677703445936e-08,
+      "wasserstein_distance": 5.441740807965445e-11,
+      "hamming_distance": 0,
+      "logits_kl": 3.0714457312325773e-14,
+      "top1_agreement": 1.0,
+      "logits_mse": 1.790108291396949e-12,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 2.765655517578125e-05,
+      "mean_logit_diff": 7.875038136262446e-07,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.986328125,
+      "post_inject_acc": 0.986328125,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 1.864909344818443,
+      "injection_seconds": 0.17190168472006917,
+      "post_inject_eval_seconds": 1.4656665339134634
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "swin_cifar10",
+    "task": "cifar10",
+    "x": 8,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 144,
+    "target_prefixes": [
+      "swin.encoder.layers"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 670040064,
+    "capacity_kb": 81792.0,
+    "capacity_used": 1.0,
+    "payload": {
+      "path": "payloads/malware/c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88.js.malware",
+      "sha256": "c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88",
+      "file_type": "malware",
+      "n_bits": 1100128
+    },
+    "inject_report": {
+      "swin.encoder.layers.0.blocks.0.attention.self.query.weight": 131072,
+      "swin.encoder.layers.0.blocks.0.attention.self.key.weight": 131072,
+      "swin.encoder.layers.0.blocks.0.attention.self.value.weight": 131072,
+      "swin.encoder.layers.0.blocks.0.attention.output.dense.weight": 131072,
+      "swin.encoder.layers.0.blocks.0.intermediate.dense.weight": 524288,
+      "swin.encoder.layers.0.blocks.0.output.dense.weight": 51552
+    },
+    "injection_summary": {
+      "payload_bits_total": 1100128,
+      "written_bits_total": 1100128,
+      "truncated": false,
+      "capacity_used": 1.0
+    },
+    "total_injected_bits": 1100128,
+    "metrics": {
+      "bit_accuracy": 1.0,
+      "lsb_similarity": 1.0,
+      "exact_recovery": true,
+      "hash_match": true,
+      "bit_accuracy_strict": 1.0,
+      "exact_recovery_strict": true,
+      "original_bits_count": 1100128,
+      "recovered_bits_count": 1100128,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 1.0,
+      "correct_bytes": 137516,
+      "total_bytes": 137516,
+      "cosine_similarity": 0.9999999999999364,
+      "weight_norm_ratio": 0.9999999931950663,
+      "l2_distance": 0.00016844660907288966,
+      "relative_l2_distance": 3.5685997151183727e-07,
+      "wasserstein_distance": 3.8600092566731803e-10,
+      "hamming_distance": 0,
+      "logits_kl": 1.5956025110509791e-12,
+      "top1_agreement": 1.0,
+      "logits_mse": 9.1062207579172e-11,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 0.0002014636993408203,
+      "mean_logit_diff": 5.2557239541783925e-06,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.986328125,
+      "post_inject_acc": 0.986328125,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 2.5501519008539617,
+      "injection_seconds": 0.14574127737432718,
+      "post_inject_eval_seconds": 1.509551021270454
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "swin_cifar10",
+    "task": "cifar10",
+    "x": 16,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 144,
+    "target_prefixes": [
+      "swin.encoder.layers"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 1340080128,
+    "capacity_kb": 163584.0,
+    "capacity_used": 1.0,
+    "payload": {
+      "path": "payloads/malware/c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88.js.malware",
+      "sha256": "c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88",
+      "file_type": "malware",
+      "n_bits": 1100128
+    },
+    "inject_report": {
+      "swin.encoder.layers.0.blocks.0.attention.self.query.weight": 262144,
+      "swin.encoder.layers.0.blocks.0.attention.self.key.weight": 262144,
+      "swin.encoder.layers.0.blocks.0.attention.self.value.weight": 262144,
+      "swin.encoder.layers.0.blocks.0.attention.output.dense.weight": 262144,
+      "swin.encoder.layers.0.blocks.0.intermediate.dense.weight": 51552
+    },
+    "injection_summary": {
+      "payload_bits_total": 1100128,
+      "written_bits_total": 1100128,
+      "truncated": false,
+      "capacity_used": 1.0
+    },
+    "total_injected_bits": 1100128,
+    "metrics": {
+      "bit_accuracy": 1.0,
+      "lsb_similarity": 1.0,
+      "exact_recovery": true,
+      "hash_match": true,
+      "bit_accuracy_strict": 1.0,
+      "exact_recovery_strict": true,
+      "original_bits_count": 1100128,
+      "recovered_bits_count": 1100128,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 1.0,
+      "correct_bytes": 137516,
+      "total_bytes": 137516,
+      "cosine_similarity": 0.9999999974693783,
+      "weight_norm_ratio": 0.9999989490309995,
+      "l2_distance": 0.03358460176754661,
+      "relative_l2_distance": 7.1150141258213e-05,
+      "wasserstein_distance": 3.922897562347316e-08,
+      "hamming_distance": 0,
+      "logits_kl": 1.849491856438854e-07,
+      "top1_agreement": 1.0,
+      "logits_mse": 3.8022815012084266e-06,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 0.02917003631591797,
+      "mean_logit_diff": 0.0011614110466325656,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.986328125,
+      "post_inject_acc": 0.986328125,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 1.8667585900984704,
+      "injection_seconds": 0.140278825070709,
+      "post_inject_eval_seconds": 1.5003660428337753
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "swin_cifar10",
+    "task": "cifar10",
+    "x": 19,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 144,
+    "target_prefixes": [
+      "swin.encoder.layers"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 1591345152,
+    "capacity_kb": 194256.0,
+    "capacity_used": 0.9999918191337736,
+    "payload": {
+      "path": "payloads/malware/c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88.js.malware",
+      "sha256": "c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88",
+      "file_type": "malware",
+      "n_bits": 1100128
+    },
+    "inject_report": {
+      "swin.encoder.layers.0.blocks.0.attention.self.query.weight": 311296,
+      "swin.encoder.layers.0.blocks.0.attention.self.key.weight": 311296,
+      "swin.encoder.layers.0.blocks.0.attention.self.value.weight": 311296,
+      "swin.encoder.layers.0.blocks.0.attention.output.dense.weight": 166231
+    },
+    "injection_summary": {
+      "payload_bits_total": 1100128,
+      "written_bits_total": 1100119,
+      "truncated": true,
+      "capacity_used": 0.9999918191337736
+    },
+    "total_injected_bits": 1100119,
+    "metrics": {
+      "bit_accuracy": 0.9999954550743186,
+      "lsb_similarity": 0.9999954550743186,
+      "exact_recovery": false,
+      "hash_match": false,
+      "bit_accuracy_strict": 0.9999954550743186,
+      "exact_recovery_strict": false,
+      "original_bits_count": 1100128,
+      "recovered_bits_count": 1100128,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 0.9999854562378196,
+      "correct_bytes": 137514,
+      "total_bytes": 137516,
+      "cosine_similarity": 0.9999997949412904,
+      "weight_norm_ratio": 0.9999977959141039,
+      "l2_distance": 0.302287810655891,
+      "relative_l2_distance": 0.0006404071895110565,
+      "wasserstein_distance": 7.474728391798635e-08,
+      "hamming_distance": 5,
+      "logits_kl": 4.252843848356535e-06,
+      "top1_agreement": 1.0,
+      "logits_mse": 0.00010597176157034482,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 0.20907306671142578,
+      "mean_logit_diff": 0.005896222416777164,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.986328125,
+      "post_inject_acc": 0.986328125,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 2.110815411899239,
+      "injection_seconds": 0.13650996098294854,
+      "post_inject_eval_seconds": 1.8926674057729542
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "swin_cifar10",
+    "task": "cifar10",
+    "x": 21,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 144,
+    "target_prefixes": [
+      "swin.encoder.layers"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 1758855168,
+    "capacity_kb": 214704.0,
+    "capacity_used": 0.9999990910148637,
+    "payload": {
+      "path": "payloads/malware/c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88.js.malware",
+      "sha256": "c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88",
+      "file_type": "malware",
+      "n_bits": 1100128
+    },
+    "inject_report": {
+      "swin.encoder.layers.0.blocks.0.attention.self.query.weight": 344064,
+      "swin.encoder.layers.0.blocks.0.attention.self.key.weight": 344064,
+      "swin.encoder.layers.0.blocks.0.attention.self.value.weight": 344064,
+      "swin.encoder.layers.0.blocks.0.attention.output.dense.weight": 67935
+    },
+    "injection_summary": {
+      "payload_bits_total": 1100128,
+      "written_bits_total": 1100127,
+      "truncated": true,
+      "capacity_used": 0.9999990910148637
+    },
+    "total_injected_bits": 1100127,
+    "metrics": {
+      "bit_accuracy": 1.0,
+      "lsb_similarity": 1.0,
+      "exact_recovery": true,
+      "hash_match": true,
+      "bit_accuracy_strict": 1.0,
+      "exact_recovery_strict": true,
+      "original_bits_count": 1100128,
+      "recovered_bits_count": 1100128,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 1.0,
+      "correct_bytes": 137516,
+      "total_bytes": 137516,
+      "cosine_similarity": 0.9999970648611899,
+      "weight_norm_ratio": 1.0000001283648914,
+      "l2_distance": 1.1436517268705166,
+      "relative_l2_distance": 0.002422865766884474,
+      "wasserstein_distance": 1.6639711475363583e-07,
+      "hamming_distance": 0,
+      "logits_kl": 3.101146825767511e-05,
+      "top1_agreement": 1.0,
+      "logits_mse": 0.0005399954434324172,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 0.236663818359375,
+      "mean_logit_diff": 0.01611349731683731,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.986328125,
+      "post_inject_acc": 0.986328125,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 2.3114189789630473,
+      "injection_seconds": 0.13800308806821704,
+      "post_inject_eval_seconds": 1.8989760396070778
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "swin_cifar10",
+    "task": "cifar10",
+    "x": 23,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 144,
+    "target_prefixes": [
+      "swin.encoder.layers"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 1926365184,
+    "capacity_kb": 235152.0,
+    "capacity_used": 0.9999863652229559,
+    "payload": {
+      "path": "payloads/malware/c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88.js.malware",
+      "sha256": "c37c0db91ab188c2fe01642e04e0db9186bc5bf54ad8b6b72512ad5aab921a88",
+      "file_type": "malware",
+      "n_bits": 1100128
+    },
+    "inject_report": {
+      "swin.encoder.layers.0.blocks.0.attention.self.query.weight": 376832,
+      "swin.encoder.layers.0.blocks.0.attention.self.key.weight": 376832,
+      "swin.encoder.layers.0.blocks.0.attention.self.value.weight": 346449
+    },
+    "injection_summary": {
+      "payload_bits_total": 1100128,
+      "written_bits_total": 1100113,
+      "truncated": true,
+      "capacity_used": 0.9999863652229559
+    },
+    "total_injected_bits": 1100113,
+    "metrics": {
+      "bit_accuracy": 0.9999954550743186,
+      "lsb_similarity": 0.9999954550743186,
+      "exact_recovery": false,
+      "hash_match": false,
+      "bit_accuracy_strict": 0.9999954550743186,
+      "exact_recovery_strict": false,
+      "original_bits_count": 1100128,
+      "recovered_bits_count": 1100128,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 0.9999854562378196,
+      "correct_bytes": 137514,
+      "total_bytes": 137516,
+      "cosine_similarity": 0.999952954414065,
+      "weight_norm_ratio": 1.000111422333859,
+      "l2_distance": 4.579222329553174,
+      "relative_l2_distance": 0.009701240998942248,
+      "wasserstein_distance": 1.4673837540613022e-06,
+      "hamming_distance": 5,
+      "logits_kl": 0.00046276331381741605,
+      "top1_agreement": 1.0,
+      "logits_mse": 0.005012783243728336,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 0.748748779296875,
+      "mean_logit_diff": 0.0502238167449832,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.986328125,
+      "post_inject_acc": 0.986328125,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 1.8807242871262133,
+      "injection_seconds": 0.1273954827338457,
+      "post_inject_eval_seconds": 1.4856720180250704
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "swin_cifar10",
+    "task": "cifar10",
+    "x": 4,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 144,
+    "target_prefixes": [
+      "swin.encoder.layers"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 335020032,
+    "capacity_kb": 40896.0,
+    "capacity_used": 1.0,
+    "payload": {
+      "path": "payloads/malware/5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0.exe.malware",
+      "sha256": "5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0",
+      "file_type": "malware",
+      "n_bits": 73493568
+    },
+    "inject_report": {
+      "swin.encoder.layers.0.blocks.0.attention.self.query.weight": 65536,
+      "swin.encoder.layers.0.blocks.0.attention.self.key.weight": 65536,
+      "swin.encoder.layers.0.blocks.0.attention.self.value.weight": 65536,
+      "swin.encoder.layers.0.blocks.0.attention.output.dense.weight": 65536,
+      "swin.encoder.layers.0.blocks.0.intermediate.dense.weight": 262144,
+      "swin.encoder.layers.0.blocks.0.output.dense.weight": 262144,
+      "swin.encoder.layers.0.blocks.1.attention.self.query.weight": 65536,
+      "swin.encoder.layers.0.blocks.1.attention.self.key.weight": 65536,
+      "swin.encoder.layers.0.blocks.1.attention.self.value.weight": 65536,
+      "swin.encoder.layers.0.blocks.1.attention.output.dense.weight": 65536,
+      "swin.encoder.layers.0.blocks.1.intermediate.dense.weight": 262144,
+      "swin.encoder.layers.0.blocks.1.output.dense.weight": 262144,
+      "swin.encoder.layers.1.blocks.0.attention.self.query.weight": 262144,
+      "swin.encoder.layers.1.blocks.0.attention.self.key.weight": 262144,
+      "swin.encoder.layers.1.blocks.0.attention.self.value.weight": 262144,
+      "swin.encoder.layers.1.blocks.0.attention.output.dense.weight": 262144,
+      "swin.encoder.layers.1.blocks.0.intermediate.dense.weight": 1048576,
+      "swin.encoder.layers.1.blocks.0.output.dense.weight": 1048576,
+      "swin.encoder.layers.1.blocks.1.attention.self.query.weight": 262144,
+      "swin.encoder.layers.1.blocks.1.attention.self.key.weight": 262144,
+      "swin.encoder.layers.1.blocks.1.attention.self.value.weight": 262144,
+      "swin.encoder.layers.1.blocks.1.attention.output.dense.weight": 262144,
+      "swin.encoder.layers.1.blocks.1.intermediate.dense.weight": 1048576,
+      "swin.encoder.layers.1.blocks.1.output.dense.weight": 1048576,
+      "swin.encoder.layers.2.blocks.0.attention.self.query.weight": 1048576,
+      "swin.encoder.layers.2.blocks.0.attention.self.key.weight": 1048576,
+      "swin.encoder.layers.2.blocks.0.attention.self.value.weight": 1048576,
+      "swin.encoder.layers.2.blocks.0.attention.output.dense.weight": 1048576,
+      "swin.encoder.layers.2.blocks.0.intermediate.dense.weight": 4194304,
+      "swin.encoder.layers.2.blocks.0.output.dense.weight": 4194304,
+      "swin.encoder.layers.2.blocks.1.attention.self.query.weight": 1048576,
+      "swin.encoder.layers.2.blocks.1.attention.self.key.weight": 1048576,
+      "swin.encoder.layers.2.blocks.1.attention.self.value.weight": 1048576,
+      "swin.encoder.layers.2.blocks.1.attention.output.dense.weight": 1048576,
+      "swin.encoder.layers.2.blocks.1.intermediate.dense.weight": 4194304,
+      "swin.encoder.layers.2.blocks.1.output.dense.weight": 4194304,
+      "swin.encoder.layers.2.blocks.2.attention.self.query.weight": 1048576,
+      "swin.encoder.layers.2.blocks.2.attention.self.key.weight": 1048576,
+      "swin.encoder.layers.2.blocks.2.attention.self.value.weight": 1048576,
+      "swin.encoder.layers.2.blocks.2.attention.output.dense.weight": 1048576,
+      "swin.encoder.layers.2.blocks.2.intermediate.dense.weight": 4194304,
+      "swin.encoder.layers.2.blocks.2.output.dense.weight": 4194304,
+      "swin.encoder.layers.2.blocks.3.attention.self.query.weight": 1048576,
+      "swin.encoder.layers.2.blocks.3.attention.self.key.weight": 1048576,
+      "swin.encoder.layers.2.blocks.3.attention.self.value.weight": 1048576,
+      "swin.encoder.layers.2.blocks.3.attention.output.dense.weight": 1048576,
+      "swin.encoder.layers.2.blocks.3.intermediate.dense.weight": 4194304,
+      "swin.encoder.layers.2.blocks.3.output.dense.weight": 4194304,
+      "swin.encoder.layers.2.blocks.4.attention.self.query.weight": 1048576,
+      "swin.encoder.layers.2.blocks.4.attention.self.key.weight": 1048576,
+      "swin.encoder.layers.2.blocks.4.attention.self.value.weight": 1048576,
+      "swin.encoder.layers.2.blocks.4.attention.output.dense.weight": 1048576,
+      "swin.encoder.layers.2.blocks.4.intermediate.dense.weight": 4194304,
+      "swin.encoder.layers.2.blocks.4.output.dense.weight": 4194304,
+      "swin.encoder.layers.2.blocks.5.attention.self.query.weight": 1048576,
+      "swin.encoder.layers.2.blocks.5.attention.self.key.weight": 1048576,
+      "swin.encoder.layers.2.blocks.5.attention.self.value.weight": 617536
+    },
+    "injection_summary": {
+      "payload_bits_total": 73493568,
+      "written_bits_total": 73493568,
+      "truncated": false,
+      "capacity_used": 1.0
+    },
+    "total_injected_bits": 73493568,
+    "metrics": {
+      "bit_accuracy": 1.0,
+      "lsb_similarity": 1.0,
+      "exact_recovery": true,
+      "hash_match": true,
+      "bit_accuracy_strict": 1.0,
+      "exact_recovery_strict": true,
+      "original_bits_count": 73493568,
+      "recovered_bits_count": 73493568,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 1.0,
+      "correct_bytes": 9186696,
+      "total_bytes": 9186696,
+      "cosine_similarity": 0.9999999999999677,
+      "weight_norm_ratio": 0.9999999996960113,
+      "l2_distance": 0.00012010067689894944,
+      "relative_l2_distance": 2.544374408757947e-07,
+      "wasserstein_distance": 2.258802034305063e-09,
+      "hamming_distance": 0,
+      "logits_kl": 6.641761967413637e-14,
+      "top1_agreement": 1.0,
+      "logits_mse": 2.3975361338580232e-12,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 2.574920654296875e-05,
+      "mean_logit_diff": 9.21107130125165e-07,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.986328125,
+      "post_inject_acc": 0.986328125,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 2.8522190367802978,
+      "injection_seconds": 11.433479291852564,
+      "post_inject_eval_seconds": 1.4973714710213244
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "swin_cifar10",
+    "task": "cifar10",
+    "x": 8,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 144,
+    "target_prefixes": [
+      "swin.encoder.layers"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 670040064,
+    "capacity_kb": 81792.0,
+    "capacity_used": 1.0,
+    "payload": {
+      "path": "payloads/malware/5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0.exe.malware",
+      "sha256": "5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0",
+      "file_type": "malware",
+      "n_bits": 73493568
+    },
+    "inject_report": {
+      "swin.encoder.layers.0.blocks.0.attention.self.query.weight": 131072,
+      "swin.encoder.layers.0.blocks.0.attention.self.key.weight": 131072,
+      "swin.encoder.layers.0.blocks.0.attention.self.value.weight": 131072,
+      "swin.encoder.layers.0.blocks.0.attention.output.dense.weight": 131072,
+      "swin.encoder.layers.0.blocks.0.intermediate.dense.weight": 524288,
+      "swin.encoder.layers.0.blocks.0.output.dense.weight": 524288,
+      "swin.encoder.layers.0.blocks.1.attention.self.query.weight": 131072,
+      "swin.encoder.layers.0.blocks.1.attention.self.key.weight": 131072,
+      "swin.encoder.layers.0.blocks.1.attention.self.value.weight": 131072,
+      "swin.encoder.layers.0.blocks.1.attention.output.dense.weight": 131072,
+      "swin.encoder.layers.0.blocks.1.intermediate.dense.weight": 524288,
+      "swin.encoder.layers.0.blocks.1.output.dense.weight": 524288,
+      "swin.encoder.layers.1.blocks.0.attention.self.query.weight": 524288,
+      "swin.encoder.layers.1.blocks.0.attention.self.key.weight": 524288,
+      "swin.encoder.layers.1.blocks.0.attention.self.value.weight": 524288,
+      "swin.encoder.layers.1.blocks.0.attention.output.dense.weight": 524288,
+      "swin.encoder.layers.1.blocks.0.intermediate.dense.weight": 2097152,
+      "swin.encoder.layers.1.blocks.0.output.dense.weight": 2097152,
+      "swin.encoder.layers.1.blocks.1.attention.self.query.weight": 524288,
+      "swin.encoder.layers.1.blocks.1.attention.self.key.weight": 524288,
+      "swin.encoder.layers.1.blocks.1.attention.self.value.weight": 524288,
+      "swin.encoder.layers.1.blocks.1.attention.output.dense.weight": 524288,
+      "swin.encoder.layers.1.blocks.1.intermediate.dense.weight": 2097152,
+      "swin.encoder.layers.1.blocks.1.output.dense.weight": 2097152,
+      "swin.encoder.layers.2.blocks.0.attention.self.query.weight": 2097152,
+      "swin.encoder.layers.2.blocks.0.attention.self.key.weight": 2097152,
+      "swin.encoder.layers.2.blocks.0.attention.self.value.weight": 2097152,
+      "swin.encoder.layers.2.blocks.0.attention.output.dense.weight": 2097152,
+      "swin.encoder.layers.2.blocks.0.intermediate.dense.weight": 8388608,
+      "swin.encoder.layers.2.blocks.0.output.dense.weight": 8388608,
+      "swin.encoder.layers.2.blocks.1.attention.self.query.weight": 2097152,
+      "swin.encoder.layers.2.blocks.1.attention.self.key.weight": 2097152,
+      "swin.encoder.layers.2.blocks.1.attention.self.value.weight": 2097152,
+      "swin.encoder.layers.2.blocks.1.attention.output.dense.weight": 2097152,
+      "swin.encoder.layers.2.blocks.1.intermediate.dense.weight": 8388608,
+      "swin.encoder.layers.2.blocks.1.output.dense.weight": 8388608,
+      "swin.encoder.layers.2.blocks.2.attention.self.query.weight": 2097152,
+      "swin.encoder.layers.2.blocks.2.attention.self.key.weight": 2097152,
+      "swin.encoder.layers.2.blocks.2.attention.self.value.weight": 2097152,
+      "swin.encoder.layers.2.blocks.2.attention.output.dense.weight": 1141824
+    },
+    "injection_summary": {
+      "payload_bits_total": 73493568,
+      "written_bits_total": 73493568,
+      "truncated": false,
+      "capacity_used": 1.0
+    },
+    "total_injected_bits": 73493568,
+    "metrics": {
+      "bit_accuracy": 1.0,
+      "lsb_similarity": 1.0,
+      "exact_recovery": true,
+      "hash_match": true,
+      "bit_accuracy_strict": 1.0,
+      "exact_recovery_strict": true,
+      "original_bits_count": 73493568,
+      "recovered_bits_count": 73493568,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 1.0,
+      "correct_bytes": 9186696,
+      "total_bytes": 9186696,
+      "cosine_similarity": 0.9999999999957588,
+      "weight_norm_ratio": 1.0000000007694818,
+      "l2_distance": 0.0013747413268491173,
+      "relative_l2_distance": 2.912437082798353e-06,
+      "wasserstein_distance": 8.03503485968804e-09,
+      "hamming_distance": 0,
+      "logits_kl": 5.255957842266379e-12,
+      "top1_agreement": 1.0,
+      "logits_mse": 1.9090726981023376e-10,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 0.0002536773681640625,
+      "mean_logit_diff": 8.125633758027107e-06,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.986328125,
+      "post_inject_acc": 0.986328125,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 2.28642068291083,
+      "injection_seconds": 9.565929257310927,
+      "post_inject_eval_seconds": 1.4841356500983238
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "swin_cifar10",
+    "task": "cifar10",
+    "x": 16,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 144,
+    "target_prefixes": [
+      "swin.encoder.layers"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 1340080128,
+    "capacity_kb": 163584.0,
+    "capacity_used": 1.0,
+    "payload": {
+      "path": "payloads/malware/5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0.exe.malware",
+      "sha256": "5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0",
+      "file_type": "malware",
+      "n_bits": 73493568
+    },
+    "inject_report": {
+      "swin.encoder.layers.0.blocks.0.attention.self.query.weight": 262144,
+      "swin.encoder.layers.0.blocks.0.attention.self.key.weight": 262144,
+      "swin.encoder.layers.0.blocks.0.attention.self.value.weight": 262144,
+      "swin.encoder.layers.0.blocks.0.attention.output.dense.weight": 262144,
+      "swin.encoder.layers.0.blocks.0.intermediate.dense.weight": 1048576,
+      "swin.encoder.layers.0.blocks.0.output.dense.weight": 1048576,
+      "swin.encoder.layers.0.blocks.1.attention.self.query.weight": 262144,
+      "swin.encoder.layers.0.blocks.1.attention.self.key.weight": 262144,
+      "swin.encoder.layers.0.blocks.1.attention.self.value.weight": 262144,
+      "swin.encoder.layers.0.blocks.1.attention.output.dense.weight": 262144,
+      "swin.encoder.layers.0.blocks.1.intermediate.dense.weight": 1048576,
+      "swin.encoder.layers.0.blocks.1.output.dense.weight": 1048576,
+      "swin.encoder.layers.1.blocks.0.attention.self.query.weight": 1048576,
+      "swin.encoder.layers.1.blocks.0.attention.self.key.weight": 1048576,
+      "swin.encoder.layers.1.blocks.0.attention.self.value.weight": 1048576,
+      "swin.encoder.layers.1.blocks.0.attention.output.dense.weight": 1048576,
+      "swin.encoder.layers.1.blocks.0.intermediate.dense.weight": 4194304,
+      "swin.encoder.layers.1.blocks.0.output.dense.weight": 4194304,
+      "swin.encoder.layers.1.blocks.1.attention.self.query.weight": 1048576,
+      "swin.encoder.layers.1.blocks.1.attention.self.key.weight": 1048576,
+      "swin.encoder.layers.1.blocks.1.attention.self.value.weight": 1048576,
+      "swin.encoder.layers.1.blocks.1.attention.output.dense.weight": 1048576,
+      "swin.encoder.layers.1.blocks.1.intermediate.dense.weight": 4194304,
+      "swin.encoder.layers.1.blocks.1.output.dense.weight": 4194304,
+      "swin.encoder.layers.2.blocks.0.attention.self.query.weight": 4194304,
+      "swin.encoder.layers.2.blocks.0.attention.self.key.weight": 4194304,
+      "swin.encoder.layers.2.blocks.0.attention.self.value.weight": 4194304,
+      "swin.encoder.layers.2.blocks.0.attention.output.dense.weight": 4194304,
+      "swin.encoder.layers.2.blocks.0.intermediate.dense.weight": 16777216,
+      "swin.encoder.layers.2.blocks.0.output.dense.weight": 8481856
+    },
+    "injection_summary": {
+      "payload_bits_total": 73493568,
+      "written_bits_total": 73493568,
+      "truncated": false,
+      "capacity_used": 1.0
+    },
+    "total_injected_bits": 73493568,
+    "metrics": {
+      "bit_accuracy": 1.0,
+      "lsb_similarity": 1.0,
+      "exact_recovery": true,
+      "hash_match": true,
+      "bit_accuracy_strict": 1.0,
+      "exact_recovery_strict": true,
+      "original_bits_count": 73493568,
+      "recovered_bits_count": 73493568,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 1.0,
+      "correct_bytes": 9186696,
+      "total_bytes": 9186696,
+      "cosine_similarity": 0.9999998523909447,
+      "weight_norm_ratio": 1.0000001591403245,
+      "l2_distance": 0.25646965402128236,
+      "relative_l2_distance": 0.0005433398388452077,
+      "wasserstein_distance": 1.4857317864880315e-07,
+      "hamming_distance": 0,
+      "logits_kl": 7.456193519890824e-07,
+      "top1_agreement": 1.0,
+      "logits_mse": 1.6284789268183886e-05,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 0.1432933807373047,
+      "mean_logit_diff": 0.002032783557660878,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.986328125,
+      "post_inject_acc": 0.986328125,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 2.512164970859885,
+      "injection_seconds": 8.964446668047458,
+      "post_inject_eval_seconds": 1.9045102968811989
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "swin_cifar10",
+    "task": "cifar10",
+    "x": 19,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 144,
+    "target_prefixes": [
+      "swin.encoder.layers"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 1591345152,
+    "capacity_kb": 194256.0,
+    "capacity_used": 0.999999863933671,
+    "payload": {
+      "path": "payloads/malware/5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0.exe.malware",
+      "sha256": "5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0",
+      "file_type": "malware",
+      "n_bits": 73493568
+    },
+    "inject_report": {
+      "swin.encoder.layers.0.blocks.0.attention.self.query.weight": 311296,
+      "swin.encoder.layers.0.blocks.0.attention.self.key.weight": 311296,
+      "swin.encoder.layers.0.blocks.0.attention.self.value.weight": 311296,
+      "swin.encoder.layers.0.blocks.0.attention.output.dense.weight": 311296,
+      "swin.encoder.layers.0.blocks.0.intermediate.dense.weight": 1245184,
+      "swin.encoder.layers.0.blocks.0.output.dense.weight": 1245184,
+      "swin.encoder.layers.0.blocks.1.attention.self.query.weight": 311296,
+      "swin.encoder.layers.0.blocks.1.attention.self.key.weight": 311296,
+      "swin.encoder.layers.0.blocks.1.attention.self.value.weight": 311296,
+      "swin.encoder.layers.0.blocks.1.attention.output.dense.weight": 311296,
+      "swin.encoder.layers.0.blocks.1.intermediate.dense.weight": 1245184,
+      "swin.encoder.layers.0.blocks.1.output.dense.weight": 1245184,
+      "swin.encoder.layers.1.blocks.0.attention.self.query.weight": 1245184,
+      "swin.encoder.layers.1.blocks.0.attention.self.key.weight": 1245184,
+      "swin.encoder.layers.1.blocks.0.attention.self.value.weight": 1245184,
+      "swin.encoder.layers.1.blocks.0.attention.output.dense.weight": 1245184,
+      "swin.encoder.layers.1.blocks.0.intermediate.dense.weight": 4980736,
+      "swin.encoder.layers.1.blocks.0.output.dense.weight": 4980736,
+      "swin.encoder.layers.1.blocks.1.attention.self.query.weight": 1245184,
+      "swin.encoder.layers.1.blocks.1.attention.self.key.weight": 1245184,
+      "swin.encoder.layers.1.blocks.1.attention.self.value.weight": 1245184,
+      "swin.encoder.layers.1.blocks.1.attention.output.dense.weight": 1245184,
+      "swin.encoder.layers.1.blocks.1.intermediate.dense.weight": 4980736,
+      "swin.encoder.layers.1.blocks.1.output.dense.weight": 4980736,
+      "swin.encoder.layers.2.blocks.0.attention.self.query.weight": 4980736,
+      "swin.encoder.layers.2.blocks.0.attention.self.key.weight": 4980736,
+      "swin.encoder.layers.2.blocks.0.attention.self.value.weight": 4980736,
+      "swin.encoder.layers.2.blocks.0.attention.output.dense.weight": 4980736,
+      "swin.encoder.layers.2.blocks.0.intermediate.dense.weight": 16215094
+    },
+    "injection_summary": {
+      "payload_bits_total": 73493568,
+      "written_bits_total": 73493558,
+      "truncated": true,
+      "capacity_used": 0.999999863933671
+    },
+    "total_injected_bits": 73493558,
+    "metrics": {
+      "bit_accuracy": 0.9999999455734684,
+      "lsb_similarity": 0.9999999455734684,
+      "exact_recovery": false,
+      "hash_match": false,
+      "bit_accuracy_strict": 0.9999999455734684,
+      "exact_recovery_strict": false,
+      "original_bits_count": 73493568,
+      "recovered_bits_count": 73493568,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 0.9999997822938737,
+      "correct_bytes": 9186694,
+      "total_bytes": 9186696,
+      "cosine_similarity": 0.9999916305282557,
+      "weight_norm_ratio": 1.0000087994770048,
+      "l2_distance": 1.9312183183186298,
+      "relative_l2_distance": 0.004091352849733574,
+      "wasserstein_distance": 7.690684924455127e-07,
+      "hamming_distance": 4,
+      "logits_kl": 4.201836761408257e-05,
+      "top1_agreement": 1.0,
+      "logits_mse": 0.00045377170226856833,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 0.2818021774291992,
+      "mean_logit_diff": 0.014422103436663747,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.986328125,
+      "post_inject_acc": 0.986328125,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 2.1499737449921668,
+      "injection_seconds": 8.350210594013333,
+      "post_inject_eval_seconds": 2.0282536447048187
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "swin_cifar10",
+    "task": "cifar10",
+    "x": 21,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 144,
+    "target_prefixes": [
+      "swin.encoder.layers"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 1758855168,
+    "capacity_kb": 214704.0,
+    "capacity_used": 0.9999997959005066,
+    "payload": {
+      "path": "payloads/malware/5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0.exe.malware",
+      "sha256": "5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0",
+      "file_type": "malware",
+      "n_bits": 73493568
+    },
+    "inject_report": {
+      "swin.encoder.layers.0.blocks.0.attention.self.query.weight": 344064,
+      "swin.encoder.layers.0.blocks.0.attention.self.key.weight": 344064,
+      "swin.encoder.layers.0.blocks.0.attention.self.value.weight": 344064,
+      "swin.encoder.layers.0.blocks.0.attention.output.dense.weight": 344064,
+      "swin.encoder.layers.0.blocks.0.intermediate.dense.weight": 1376256,
+      "swin.encoder.layers.0.blocks.0.output.dense.weight": 1376256,
+      "swin.encoder.layers.0.blocks.1.attention.self.query.weight": 344064,
+      "swin.encoder.layers.0.blocks.1.attention.self.key.weight": 344064,
+      "swin.encoder.layers.0.blocks.1.attention.self.value.weight": 344064,
+      "swin.encoder.layers.0.blocks.1.attention.output.dense.weight": 344064,
+      "swin.encoder.layers.0.blocks.1.intermediate.dense.weight": 1376256,
+      "swin.encoder.layers.0.blocks.1.output.dense.weight": 1376256,
+      "swin.encoder.layers.1.blocks.0.attention.self.query.weight": 1376256,
+      "swin.encoder.layers.1.blocks.0.attention.self.key.weight": 1376256,
+      "swin.encoder.layers.1.blocks.0.attention.self.value.weight": 1376256,
+      "swin.encoder.layers.1.blocks.0.attention.output.dense.weight": 1376256,
+      "swin.encoder.layers.1.blocks.0.intermediate.dense.weight": 5505024,
+      "swin.encoder.layers.1.blocks.0.output.dense.weight": 5505024,
+      "swin.encoder.layers.1.blocks.1.attention.self.query.weight": 1376256,
+      "swin.encoder.layers.1.blocks.1.attention.self.key.weight": 1376256,
+      "swin.encoder.layers.1.blocks.1.attention.self.value.weight": 1376256,
+      "swin.encoder.layers.1.blocks.1.attention.output.dense.weight": 1376256,
+      "swin.encoder.layers.1.blocks.1.intermediate.dense.weight": 5505024,
+      "swin.encoder.layers.1.blocks.1.output.dense.weight": 5505024,
+      "swin.encoder.layers.2.blocks.0.attention.self.query.weight": 5505024,
+      "swin.encoder.layers.2.blocks.0.attention.self.key.weight": 5505024,
+      "swin.encoder.layers.2.blocks.0.attention.self.value.weight": 5505024,
+      "swin.encoder.layers.2.blocks.0.attention.output.dense.weight": 5505024,
+      "swin.encoder.layers.2.blocks.0.intermediate.dense.weight": 10185777
+    },
+    "injection_summary": {
+      "payload_bits_total": 73493568,
+      "written_bits_total": 73493553,
+      "truncated": true,
+      "capacity_used": 0.9999997959005066
+    },
+    "total_injected_bits": 73493553,
+    "metrics": {
+      "bit_accuracy": 0.9999998911469369,
+      "lsb_similarity": 0.9999998911469369,
+      "exact_recovery": false,
+      "hash_match": false,
+      "bit_accuracy_strict": 0.9999998911469369,
+      "exact_recovery_strict": false,
+      "original_bits_count": 73493568,
+      "recovered_bits_count": 73493568,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 0.9999997822938737,
+      "correct_bytes": 9186694,
+      "total_bytes": 9186696,
+      "cosine_similarity": 0.9998779466814864,
+      "weight_norm_ratio": 1.0003043552392819,
+      "l2_distance": 7.37738877338962,
+      "relative_l2_distance": 0.01562925345896608,
+      "wasserstein_distance": 8.163358870660886e-06,
+      "hamming_distance": 8,
+      "logits_kl": 0.0005940413866853143,
+      "top1_agreement": 1.0,
+      "logits_mse": 0.004838334338273853,
+      "changed_predictions": 0,
+      "prediction_change_rate": 0.0,
+      "max_logit_diff": 0.6683056354522705,
+      "mean_logit_diff": 0.04897173373028636,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.986328125,
+      "post_inject_acc": 0.986328125,
+      "acc_drop": 0.0
+    },
+    "timing": {
+      "baseline_eval_seconds": 2.2220746870152652,
+      "injection_seconds": 8.435804388020188,
+      "post_inject_eval_seconds": 1.4619375229813159
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  },
+  {
+    "rq": "RQ1",
+    "model_preset": "swin_cifar10",
+    "task": "cifar10",
+    "x": 23,
+    "target_mode": "encoder_only",
+    "resolved_target_mode": "encoder_only",
+    "layer_range": null,
+    "n_targets": 144,
+    "target_prefixes": [
+      "swin.encoder.layers"
+    ],
+    "target_warnings": [],
+    "capacity_bits": 1926365184,
+    "capacity_kb": 235152.0,
+    "capacity_used": 0.9999998367204053,
+    "payload": {
+      "path": "payloads/malware/5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0.exe.malware",
+      "sha256": "5704fabda6a0851ea156d1731b4ed4383ce102ec3a93f5d7109cc2f47f8196d0",
+      "file_type": "malware",
+      "n_bits": 73493568
+    },
+    "inject_report": {
+      "swin.encoder.layers.0.blocks.0.attention.self.query.weight": 376832,
+      "swin.encoder.layers.0.blocks.0.attention.self.key.weight": 376832,
+      "swin.encoder.layers.0.blocks.0.attention.self.value.weight": 376832,
+      "swin.encoder.layers.0.blocks.0.attention.output.dense.weight": 376832,
+      "swin.encoder.layers.0.blocks.0.intermediate.dense.weight": 1507328,
+      "swin.encoder.layers.0.blocks.0.output.dense.weight": 1507328,
+      "swin.encoder.layers.0.blocks.1.attention.self.query.weight": 376832,
+      "swin.encoder.layers.0.blocks.1.attention.self.key.weight": 376832,
+      "swin.encoder.layers.0.blocks.1.attention.self.value.weight": 376832,
+      "swin.encoder.layers.0.blocks.1.attention.output.dense.weight": 376832,
+      "swin.encoder.layers.0.blocks.1.intermediate.dense.weight": 1507328,
+      "swin.encoder.layers.0.blocks.1.output.dense.weight": 1507328,
+      "swin.encoder.layers.1.blocks.0.attention.self.query.weight": 1507328,
+      "swin.encoder.layers.1.blocks.0.attention.self.key.weight": 1507328,
+      "swin.encoder.layers.1.blocks.0.attention.self.value.weight": 1507328,
+      "swin.encoder.layers.1.blocks.0.attention.output.dense.weight": 1507328,
+      "swin.encoder.layers.1.blocks.0.intermediate.dense.weight": 6029312,
+      "swin.encoder.layers.1.blocks.0.output.dense.weight": 6029312,
+      "swin.encoder.layers.1.blocks.1.attention.self.query.weight": 1507328,
+      "swin.encoder.layers.1.blocks.1.attention.self.key.weight": 1507328,
+      "swin.encoder.layers.1.blocks.1.attention.self.value.weight": 1507328,
+      "swin.encoder.layers.1.blocks.1.attention.output.dense.weight": 1507328,
+      "swin.encoder.layers.1.blocks.1.intermediate.dense.weight": 6029312,
+      "swin.encoder.layers.1.blocks.1.output.dense.weight": 6029312,
+      "swin.encoder.layers.2.blocks.0.attention.self.query.weight": 6029312,
+      "swin.encoder.layers.2.blocks.0.attention.self.key.weight": 6029312,
+      "swin.encoder.layers.2.blocks.0.attention.self.value.weight": 6029312,
+      "swin.encoder.layers.2.blocks.0.attention.output.dense.weight": 6029312,
+      "swin.encoder.layers.2.blocks.0.intermediate.dense.weight": 4156468
+    },
+    "injection_summary": {
+      "payload_bits_total": 73493568,
+      "written_bits_total": 73493556,
+      "truncated": true,
+      "capacity_used": 0.9999998367204053
+    },
+    "total_injected_bits": 73493556,
+    "metrics": {
+      "bit_accuracy": 0.9999998911469369,
+      "lsb_similarity": 0.9999998911469369,
+      "exact_recovery": false,
+      "hash_match": false,
+      "bit_accuracy_strict": 0.9999998911469369,
+      "exact_recovery_strict": false,
+      "original_bits_count": 73493568,
+      "recovered_bits_count": 73493568,
+      "length_ratio": 1.0,
+      "was_truncated": false,
+      "byte_accuracy": 0.9999997822938737,
+      "correct_bytes": 9186694,
+      "total_bytes": 9186696,
+      "cosine_similarity": 0.9980930575171857,
+      "weight_norm_ratio": 1.0048757211835562,
+      "l2_distance": 29.31211806416524,
+      "relative_l2_distance": 0.062098736655501696,
+      "wasserstein_distance": 0.00011727990204235539,
+      "hamming_distance": 8,
+      "logits_kl": 0.023078770593207017,
+      "top1_agreement": 0.986328125,
+      "logits_mse": 0.18269115663133562,
+      "changed_predictions": 7,
+      "prediction_change_rate": 0.013671875,
+      "max_logit_diff": 3.5108237266540527,
+      "mean_logit_diff": 0.2948385924100876,
+      "eval_sample_count": 512,
+      "accuracy_granularity": 0.001953125,
+      "base_acc": 0.986328125,
+      "post_inject_acc": 0.978515625,
+      "acc_drop": 0.0078125
+    },
+    "timing": {
+      "baseline_eval_seconds": 2.712069697678089,
+      "injection_seconds": 8.238746189046651,
+      "post_inject_eval_seconds": 1.025682752020657
+    },
+    "model_states": {
+      "clean": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/clean/model.pt",
+        "fingerprint": "6f859fab46f3aca9",
+        "targets_hash": "26e9481c4b38e4a3"
+      },
+      "poisoned": {
+        "ckpt_path": "results/2026-03-28_1424_complete/models/poisoned/model.pt",
+        "fingerprint": "7debdc24b0777167",
+        "targets_hash": "8a0ebd5383b7652a"
+      }
+    },
+    "seed": 42,
+    "eval_seed": 42,
+    "run_seed": 1,
+    "n_eval": 512,
+    "n_eval_actual": 512,
+    "full_eval": false
+  }
+]

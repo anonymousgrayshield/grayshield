@@ -1,0 +1,15 @@
+model_preset: bert_sst2
+task: sst2
+x: 2
+target_mode: attention
+layer_range: null
+n_eval: 512
+batch_size: 16
+seed: 42
+device: cuda
+
+rq2:
+  defense: intelligent
+  budget_fraction: 0.02
+  flip_prob: 0.15
+  pattern: "00"
