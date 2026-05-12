@@ -25,6 +25,12 @@ artifacts be anonymized. For the submission ZIP, include this repository
 snapshot and do not include local files under `data/malware/` other than
 `data/malware/.keep`.
 
+## Anonymous Project Page
+
+The anonymized project page for reviewers is:
+
+https://grayshieldanonymous.netlify.app/
+
 ## Paper Summary
 
 GrayShield studies an AI model supply-chain threat: malicious payloads hidden
@@ -67,6 +73,8 @@ scripts/
   exps.sh                        # Main experiment wrapper
   experiments.sh                 # Core experiment grid runner
   generate_tables.py             # Table regeneration from bundled results
+  generate_camera_ready_figures.py # Camera-ready RQ figure regeneration
+  figures/                       # Standalone RQ/appendix plotting scripts
 
 data/
   benign_payload.bin             # Benign smoke-test payload
@@ -160,6 +168,37 @@ PYTHONPATH=. python grayshield/visualization/rq4.py \
   --input_dir release_results \
   --output_dir release_results/rq4
 ```
+
+The commands above regenerate the repository's standard release-result plots.
+To regenerate the compact camera-ready RQ figures and appendix trade-off plot
+from the same bundled `release_results/` artifacts, run:
+
+```bash
+python scripts/generate_camera_ready_figures.py
+ls release_results/camera_ready_figures
+```
+
+Expected outputs:
+
+```text
+rq1_final.png
+rq1_final.pdf
+rq2_six_panels.png
+rq2_six_panels.pdf
+rq3_camera_ready_adaptive_robustness.png
+rq3_camera_ready_adaptive_robustness.pdf
+rq4_camera_ready_tradeoff.png
+rq4_camera_ready_tradeoff.pdf
+defense_tradeoff_neg.png
+```
+
+The wrapper creates a temporary `datasets/` view of the bundled JSONL files,
+runs the standalone scripts in `scripts/figures/`, and copies the generated
+figures to `release_results/camera_ready_figures/`.  These are compact
+camera-ready figure variants; the original release-result figures referenced
+by the current manuscript remain under the per-RQ directories
+(`release_results/rq1/`, `release_results/rq2/`, `release_results/rq3/`,
+and `release_results/rq4/`).
 
 ### 4. Dry-run the main experiment wrapper
 

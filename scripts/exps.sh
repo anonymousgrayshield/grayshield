@@ -98,7 +98,9 @@ log_info "GrayShield V3 mode enabled (enhanced defense)"
 # Set conda correctly if available
 if [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
     source "$HOME/miniconda3/etc/profile.d/conda.sh"
-    conda activate aisafety || true
+    if conda env list | awk '{print $1}' | grep -qx "grayshield"; then
+        conda activate grayshield
+    fi
 fi
 
 # Change to project root for consistent execution
